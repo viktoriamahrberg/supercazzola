@@ -1,3 +1,36 @@
+# About
+
+**Supercazzola** which in italian means *nonsense*; "a phrase devoid of logical sense composed of a random set of real and non-existent words". Let's skip the pretentious talk about wine and just focus on really good wine!
+For us is it just about good, non pretentious natural wines from our firends in Italy and South Africa. They may be the avkommorna från stora klassiska vingårdar som nu experimenterar på egen hand, eller nya vingårdar som bara kör sin grej - så länge vi tycker det är gott are we proud to be your local wine provider in Southern Sweden. Beacuse we assure you - you *will* come back for more. 
+
+Natural wine, or low intervention wine as it's also called, are often described as "nothing added, nothing taken away. 
+Wine as it´s purest. 
+
+
+## Business Goal
+
+Become the biggest importer of natural wine in Sweden. Targeting the people out there loving wine but may not necessarily not knowing so much about it. 
+
+## Tone of Voice
+
+We'll share informational and "educational" content in a witty, non pretentious way - not taking for granted that our community know it all.  
+
+## Business Model
+
+B2C (Buiness to Customer) - A carefully selected e-shop of imported natural wines to sell to winelovers over 21 years old in Sweden. Selection will mainly come from South Africa and Italy, seeing the gap in the market of South African wines, will especially make Supercazzola a name for itself. 
+B2B (Business to business) - A big part of Supercazzolas business model will be to distribute wine to bars and restaurants in the southern part of Sweden. Wine events, wine tastings and 
+
+Since we offer alcoholic beverage we will not have sales nor discounts on our products, but will rather make sure our community have fun at our accessable events and wine tastings, which will be shared by newsletter to those who sign up.
+
+## Target Audience
+
+- Age: 21-55
+- Informed as well as non-informed winelovers
+- Interests: Music, design/art, going out-ers (bars/restaurants), books and independent magazines
+- Persona: Curious, traveller, informed, openminded, likes spending money on the good stuff in life
+
+
+
 # User Stories
 
 ### Epic: Login/Register
@@ -41,6 +74,44 @@
 26. As a user I want to see a navigation menu so that I can easily navigate on the site
 27. As a user I want to be notified by messages when on the site so I know about alerts/errors/success
 28. As a user I want to be emailed an order confirmation so that I can keep it as a reciept of successful order
+29. As a bar/restaurant owner I want see contact information so that I can potentially buy your wine for my business
+
+
+
+# Features
+
+## UX Design
+
+Use a clean layout and a proven e-commerce structure for a smooth navigation on the site. 
+Research amongst competitors show quite pale choice of colors and the few that caught my eye had a stronger visual approach and therefor decided to go with a strong shade of yellow (quite a characteristic color of natural wine capsules, which you sometime see made of rubber), also the color of the sun and without sun no wine. Black and white for simplicity and generated complimentary colors through [Colormind.io](http://colormind.io/) to set the contrasting colors for strong visual identity.
+This also supports by our target audience being interested in art and design, looking for that different wine to stand out amongst their friends. 
+The age of target audience is proven to spend most of their time on the phone - therefor a fully responsive website on smaller devices is crucial. 
+
+### Font
+
+I wanted to create an artsy look of the logo and first went for a grafitti style font. When doing research of font pairings I found the Google Font "Permanent Marker" matched with "Overpass Regular" on [Heyreliable.com](https://heyreliable.com/) and knew immediately that I wanted these two - one for an artsy "not giving a f"-look and one for a clean and neat read.
+
+
+
+Color: #DDC445
+
+## Wireframes
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Credits
+
+- [Colormind.io](http://colormind.io/) - Color palette picker 
 
 
 
@@ -56,24 +127,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Vikmah,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
@@ -103,73 +156,3 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ------
 
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
