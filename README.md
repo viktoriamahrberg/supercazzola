@@ -1,6 +1,73 @@
+# User Stories
+
+### Epic: Login/Register
+
+1. As a user I want to register an account so that I can store delivery information for quick and easy checkout
+2. As a returning user I want to login to my account so that I can manage my account
+2. As a returning user I want to login to my account so that I can view order history
+3. As a returning user I want to login to my account so that I can add items I like to a favourite list
+4. As a returning user I want to logout from my account so that I know it is secure
+
+
+### Epic: Shop/Products
+
+5. As a store owner I want to add products to site so that I can increase sales
+6. As a store owner I want to edit products on site so that I can update products
+7. As a store owner I want to delete products to site so that I can manage products that are no longer available for sale
+8. As a user I want to view all products available to I can see what the offering is
+9. As a user I want to search for products so that I can easily navigate around on the site
+10. As a user I want to filter amongst the products so that I can easily find what is in my interest
+11. As a user I want to click on a product so I can see more details about it
+12. As a user I want to be able to see description, price, origin and color of wine so I know what I am buying
+13. As a user I want to add products to a shopping bag so that I can browse around before I checkout
+14. As a user I want to add quantity from product page so that I easily can buy more than one 
+
+### Epic: Payment/Checkout
+
+15. As a user I want to see a summary of my bag so that I know what I am eventually paying for
+16. As a user I want to see the shipping fee so that I know the total price
+17. As a user I want to be able to change quanities in the bag so that I can edit the bag in case I have changed my mind or I see the total cost is too high
+18. As a user I want to fill out my delivery information so that I can control where my order is being sent
+19. As a user I want to securely pay for my items so that my card details are safe
+20. As a user I want to be notified when an order has gone through so that I know it was successful 
+21. As a returning user I want to store my shipping information so that I quickly can checkout next time
+22. As a store owner I want to see an order summary of confirmed purchase so that I can proceed with delivery of products
+
+### Epic: Site
+
+23. As a user I want to read about the company when I land on the page so I can find out about what they do and who they are
+24. As a user I want to sign up for emails so that I can stay up to date with events/wine tastings and other news
+25. As a user I want to see Social Media links so that I easily can follow and be part of their community
+26. As a user I want to see a navigation menu so that I can easily navigate on the site
+27. As a user I want to be notified by messages when on the site so I know about alerts/errors/success
+28. As a user I want to be emailed an order confirmation so that I can keep it as a reciept of successful order
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+Welcome Vikmah,
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
