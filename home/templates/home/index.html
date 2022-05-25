@@ -2,43 +2,51 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
+<div class="container-fluid home-cover">
+    <div class="row">
+        <div class="col col-md-6 mx-auto text-center p-5">
+            <h1 class="display-4 header-font text-black">
                 We sell good non-pretentious wine!
             </h1>
         </div>
     </div>
 </div>
 
-<div class="container h-70">
-    <div class="row h-70">
-        <div class="col-6 my-auto">
-            <div class="my-5">
-                <h4>
-                    <h2>Are you are restaurant or bar owner?</h2>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">FORM HERE</a>
-                </h4>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-md my-auto home-cover-business h-70 p-5">
+            <div class="my-5 text-center">
+                <h2>Are you are restaurant or bar owner?</h2>
+                <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">FORM HERE</a>
             </div>
         </div>
-        <div class="col-6 my-auto">
-            <div class="my-5">
-                <h4>
-                    <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Wine</a>
-                </h4>
+        <div class="col-6 col-md my-auto home-cover-private h-70 p-5">
+            <div class="my-5 text-center">
+                <h2>Over 21? Check out our wines here</h2>
+                <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Wine</a>
             </div>
         </div>
     </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 my-5 text-center">
+            <h3 class="header-font">What is Natural Wine?</h3>
+            <p class="text-center p-5">
+                Minimal påverkan i tillverkningsprocessen, druvor som skördas för hand och minimalt med bekämpningsmedel
+                i vingården är några av riktlinjerna. Till exempel får bara de naturliga vilda jästsvamparna som finns
+                på vingården och i vinkällaren användas när druvmusten jäser till vin.</p>
+            </div>
+    </div>
+</div>
 
 
-            {% endblock %}
+{% endblock %}
