@@ -2,9 +2,9 @@ html {
     height: 100%;
 }
 .logo {
-    font-family: 'Permanent Marker';
+    font-family: 'Londrina Solid';
     font-size: 8vh;
-    color: #DDC445;
+    color: #000;
 }
 
 .header-font {
@@ -27,6 +27,7 @@ body {
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
     background-size: cover;
+    color: #000;
 }
 
 /* from Bulma */
@@ -63,7 +64,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #326770;
+    background: #292F30;
     color: white;
 }
 
