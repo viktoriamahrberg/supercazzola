@@ -16,11 +16,11 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Red</a>
-                <a href="" class="dropdown-item">Orange</a>
-                <a href="" class="dropdown-item">White</a>
-                <a href="" class="dropdown-item">Rosé</a>
-                <a href="" class="dropdown-item">I'm not that fussy</a>
+                <a href="{% url 'products' %}?category=red" class="dropdown-item">Red</a>
+                <a href="{% url 'products' %}?category=orange" class="dropdown-item">Orange</a>
+                <a href="{% url 'products' %}?category=white" class="dropdown-item">White</a>
+                <a href="{% url 'products' %}?category=rose" class="dropdown-item">Rosé</a>
+                <a href="{% url 'products' %}" class="dropdown-item">I'm not that fussy</a>
             </div>
         </li>
     </ul>
