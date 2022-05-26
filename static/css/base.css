@@ -14,7 +14,7 @@ html {
 .home-cover {
     background-color: #326770;
     background-size: cover; 
-    height: calc(100vh-164px);
+    height: calc(100vh-135px);
 }
 .home-cover-business {
     background-color: #DDC445
@@ -96,6 +96,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 135px;
     }
 }
