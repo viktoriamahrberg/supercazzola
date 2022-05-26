@@ -17,12 +17,12 @@ html {
     height: calc(100vh-135px);
 }
 .home-cover-business {
-    background-color: #DDC445
+    background-color: #DDC445;
 }
 .home-cover-private {
     background-color: #292F30;
 }
-   
+
 body {
     font-family: 'Overpass', sans-serif;
     font-weight: 400;

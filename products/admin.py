@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
         'country',
         'category',
         'alc',
-        'img',
+        'image',
         'price',
     )
 
