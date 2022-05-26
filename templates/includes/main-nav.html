@@ -2,24 +2,25 @@
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Wine
+                Sort by
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Wine
+            <a class="header-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="" class="dropdown-item">Red</a>
                 <a href="" class="dropdown-item">Orange</a>
                 <a href="" class="dropdown-item">White</a>
-                <a href="" class="dropdown-item">All wine</a>
+                <a href="" class="dropdown-item">Rosé</a>
+                <a href="" class="dropdown-item">I'm not that fussy</a>
             </div>
         </li>
     </ul>
