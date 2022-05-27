@@ -7,6 +7,10 @@ html {
     color: #000;
 }
 
+ul li {
+    list-style: none;
+}
+
 .header-font {
     font-family: 'Permanent Marker';
 }
@@ -34,6 +38,17 @@ body {
     color: #000;
 }
 
+
+.product-container a {
+    color: #000;
+}
+
+.product-container a:hover,
+.product-container a:active,
+.product-container a:focus {
+    color: #DDC445;
+    text-decoration: none;
+}
 
 /* from Bulma */
 .icon {
