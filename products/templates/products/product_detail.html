@@ -31,13 +31,13 @@
                 <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                 <br>
                 {% if product.country %}
-                <p class="header-font">Country: {{ product.country }}</p>
+                <p class="header-font text-muted">Country: {{ product.country }}</p>
                 {% endif %}
                 {% if product.alc %}
-                <p class="header-font">{{ product.alc }} %</p>
+                <p class="header-font text-muted">{{ product.alc }} %</p>
                 {% endif %}
                 {% if product.category %}
-                <p class="header-font">{{ product.category.friendly_name }}</p>
+                <p class="header-font text-muted">{{ product.category.friendly_name }}</p>
 
 
                 {% endif %}
