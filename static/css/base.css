@@ -47,18 +47,25 @@ a {
     color: #000;
 }
 
+.btn-outline-none:hover,
+.btn-outline-none:active,
+.btn-outline-none:focus,
 a:hover,
 a:active,
 a:focus {
     color: #DDC445;
     text-decoration: none;
     background-color: transparent;
+    outline: 0;
+    box-shadow: none!important;
 }
 
 a.dropdown-item:hover,
 a.dropdown-itema:active,
 a.dropdown-item:focus {
     background-color: #DDC445;
+    outline: 0;
+    box-shadow: none!important;
 }
 
 .btt-button {
@@ -72,11 +79,15 @@ a.dropdown-item:focus {
 .btt-link {
     cursor: pointer;
 }
+
+
 .btt-link:hover,
 .btt-link:active,
 .btt-link:focus {
     background-color: #DDC445;
     text-decoration: none;
+    outline: 0;
+    box-shadow: none!important;
 }
 
 
