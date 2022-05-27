@@ -33,14 +33,14 @@
             <div class="col-12 col-md-6 d-flex justify-content-center">
                 <ul>
                     <li class="nav-item dropdown">
-                        <a class="header-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                        <a class="header-font font-weight-bold nav-link text-black mr-5" href="#" id="sort-selector"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sort wine selection by
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By price: low to high</a>
-                            <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By price: high to low</a>
-                            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By wcolour</a>
+                        <div class="dropdown-menu border-0" aria-labelledby="sort-products-link">
+                            <a href="{% url 'products' %}?sort=price&direction=asc" value="price_asc" class="dropdown-item">By price: low to high</a>
+                            <a href="{% url 'products' %}?sort=price&direction=desc" value="price_desc" class="dropdown-item">By price: high to low</a>
+                            <a href="{% url 'products' %}?sort=category&direction=asc" value="category_asc" class="dropdown-item ">By colour</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
                     </li>
@@ -60,16 +60,17 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
+                    <!-- heart -->
+                    <div class="bg-white text-right">
+                        {% if product.rating %}
+                        <a href=""><i class="fas fa-heart">heart</i>{{ product.rating }}</a>
+                        {% else %}
+                        <a href=""><i class="fa-light fa-heart">heart</i></a>
+                        {% endif %}
+                    
+                    </div>
 
                     <div class="card-body pb-0">
-                        <!-- heart -->
-                        <div class="bg-white pt-0 border-0 text-right">
-                            {% if product.rating %}
-                            <small class="text-muted"><i class="fas fa-heart"></i>{{ product.rating }}</small>
-                            {% else %}
-                            <small class="text-muted"><i class="fa-light fa-heart"></i></small>
-                            {% endif %}
-                        </div>
                         <p class="header-font mb-0">{{ product.name }}</p>
                     </div>
                     <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -105,4 +106,20 @@
     </div>
 </div>
 </div>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-angle-up text-black mx-auto my-auto"></i>
+    </a>	
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+
 {% endblock %}

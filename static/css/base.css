@@ -43,12 +43,43 @@ body {
     color: #000;
 }
 
-.product-container a:hover,
-.product-container a:active,
-.product-container a:focus {
+a {
+    color: #000;
+}
+
+a:hover,
+a:active,
+a:focus {
     color: #DDC445;
     text-decoration: none;
+    background-color: transparent;
 }
+
+a.dropdown-item:hover,
+a.dropdown-itema:active,
+a.dropdown-item:focus {
+    background-color: #DDC445;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+.btt-link:hover,
+.btt-link:active,
+.btt-link:focus {
+    background-color: #DDC445;
+    text-decoration: none;
+}
+
+
 
 /* from Bulma */
 .icon {
