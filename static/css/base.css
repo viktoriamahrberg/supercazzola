@@ -17,6 +17,9 @@ ul li {
 .text-muted {
     color: #292F30 !important;
 }
+.text-info {
+    color: #DDC445 !important;
+}
 
 .home-cover {
     background: url('/media/background.jpg') no-repeat center center fixed;
@@ -46,6 +49,13 @@ body {
 a {
     color: #000;
 }
+.text-primary,
+.text-primary:hover,
+.text-primary:active,
+.text-primary:focus {
+    color: #ffc107 !important;
+}
+
 
 .btn-outline-none:hover,
 .btn-outline-none:active,
@@ -91,6 +101,16 @@ a.dropdown-item:focus {
 }
 
 
+.img-thumbnail {
+    max-width: 50%;
+}
+/* .table-bordered {
+    border: 1px solid #000 !important;
+} */
+
+.border {
+    color: #000 !important;
+}
 
 /* from Bulma */
 .icon {
