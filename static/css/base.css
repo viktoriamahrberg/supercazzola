@@ -157,6 +157,16 @@ a.dropdown-item:focus {
 .border-black {
     border: 1px solid black !important;
 }
+input.border-black:focus,
+input.border-black:active,
+input.border-black:hover {
+    background-color: transparent;
+}
+
+.border-black:active,
+.border-black:hover {
+    background-color: #DDC445;
+}
 
 /* -------------------------------- Media Queries */
 
