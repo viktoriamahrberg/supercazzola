@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -17,12 +18,11 @@
                 <h2 class="header-font">Cart</h2>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                <div class="table-responsive rounded">
-                    <table class="table table-bordered mt-3">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered mt-3">
                         <thead>
                             <tr>
                                 <th scope="col"></th>
@@ -36,53 +36,125 @@
                         <tbody>
                             {% for item in bag_items %}
                             <tr>
-                                <td><i class="fas fa-xmark"></i></td>
-                                <td class="p-3 w-25">
-                                    <img src="{{ item.product.image.url }}" class="img-thumbnail"
-                                        alt="{{ product.name }}">
+                                <td class="p-3 text-center">
+                                    <a href="" class="remove-item" id="remove_{{ item.item_id }}">
+                                        <i class="fas fa-xmark"></i></a>
                                 </td>
-                                <td class="p-3">{{ item.product.name }}</td>
-                                <td class="p-3">€{{ item.product.price }}</td>
-                                <td class="p-3">{{ item.quantity }}</td>
-                                <td class="p-3">€{{ item.product.price }}</td>
+                                <td class="p-3 w-25">
+                                    <img class="img-thumbnail" src="{{ item.product.image.url }}">
+                                </td>
+                                <td class="p-3">
+                                    <p class="my-0">{{ item.product.name }}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p class="my-0">€{{ item.product.price }}</p>
+                                </td>
+                                <td class="p-3">
+                                    <form class="form update-form" method="POST"
+                                        action="{% url 'adjust_bag' item.item_id %}">
+                                        {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-sm border-black rounded-0"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="decrement-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-control-sm border-black qty_input"
+                                                    type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                                    max="99" data-item_id="{{ item.item_id }}"
+                                                    id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-sm border-black rounded-0"
+                                                        data-item_id="{{ item.item_id }}"
+                                                        id="increment-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="update-link btn btn-black rounded-0 text-uppercase float-right"><small>Update
+                                            Cart</small></a>
+                                </td>
+                                <td class="p-3">
+                                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                </td>
                             </tr>
                             {% endfor %}
-                    </table>
-                </div>
-                <div class="table-responsive rounded">
-                    <table class="table table-borderless mt-3">
-                        <tr>
-                            <td colspan="5" class="pt-5 text-right">
-                                <h2 class="header-font">Cart Totals</h2>
-                                <h6 class="text-uppercase">Subtotal: €{{ total|floatformat:2 }}</h6>
-                                <h6 class="text-uppercase">Shipping: €{{ delivery|floatformat:2 }}</h6>
-                                <h6 class="mt-4 text-uppercase"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h6>
-                                {% if free_delivery_delta > 0 %}
-                                <p class="mb-1 text-info">
-                                    Spend another <strong>€{{ free_delivery_delta }}</strong> to get free shipping!
-                                </p>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
-                                    <span class="header-font">Keep Shopping</span>
-                                </a>
-                                <a href="" class="btn btn-black rounded-0 text-uppercase mt-5">
-                                    <span class="text-uppercase">Proceed to Checkout</span>
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                {% else %}
-                <p class="mb-5">Your cart is empty.</p>
-                <span class="header-font"><a href="{% url 'products' %}">Keep browsing</a></span>
+                            <div class="table-responsive rounded">
+                                <table class="table table-borderless mt-3">
+                                    <tr>
+                                        <td colspan="5" class="pt-5 text-right">
+                                            <h2 class="header-font">Cart Totals</h2>
+                                            <h6 class="text-uppercase">Subtotal: €{{ total|floatformat:2 }}</h6>
+                                            <h6 class="text-uppercase">Shipping: €{{ delivery|floatformat:2 }}</h6>
+                                            <h6 class="mt-4 text-uppercase"><strong>Total:
+                                                    €{{ grand_total|floatformat:2 }}</strong>
+                                            </h6>
+                                            {% if free_delivery_delta > 0 %}
+                                            <p class="mb-1 text-info">
+                                                Spend another <strong>€{{ free_delivery_delta }}</strong> to get free
+                                                shipping!
+                                            </p>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="text-right">
+                                            <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
+                                                <span class="header-font">Keep Shopping</span>
+                                            </a>
+                                            <a href="" class="btn btn-black rounded-0 text-uppercase mt-5">
+                                                <span class="text-uppercase">Proceed to Checkout</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            {% else %}
+                            <p class="mb-5">Your cart is empty.</p>
+                            <span class="header-font"><a href="{% url 'products' %}">Keep browsing</a></span>
 
-                {% endif %}
+                            {% endif %}
+
+                </div>
             </div>
         </div>
-    </div>
-</div>
-{% endblock %}
+        {% endblock %}
+
+        {% block postloadjs %}
+        {{ block.super }}
+        {% include 'products/includes/quantity_input_script.html' %}
+
+        <script type="text/javascript">
+            // Update quantity on click
+            $('.update-link').click(function (e) {
+                var form = $(this).prev('.update-form');
+                form.submit();
+            })
+
+            // Remove item and reload on click
+            $('.remove-item').click(function (e) {
+                var csrfToken = "{{ csrf_token }}";
+                var itemId = $(this).attr('id').split('remove_')[1];
+                var size = $(this).data('product_size');
+                var url = `/bag/remove/${itemId}/`;
+                var data = {
+                    'csrfmiddlewaretoken': csrfToken,
+                    'product_size': size
+                };
+
+                $.post(url, data)
+                    .done(function () {
+                        location.reload();
+                    });
+            })
+        </script>
+        {% endblock %}

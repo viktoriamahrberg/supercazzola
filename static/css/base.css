@@ -77,6 +77,9 @@ a.dropdown-item:focus {
     outline: 0;
     box-shadow: none!important;
 }
+.btn-small {
+    background-color: transparent;
+}
 
 .btt-button {
     height: 42px;
@@ -104,13 +107,16 @@ a.dropdown-item:focus {
 .img-thumbnail {
     max-width: 50%;
 }
-/* .table-bordered {
-    border: 1px solid #000 !important;
-} */
 
 .border {
     color: #000 !important;
 }
+
+
+/* .row {
+    margin-right: 0px;
+    margin-left: 0px;
+} */
 
 /* from Bulma */
 .icon {
