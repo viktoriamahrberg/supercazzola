@@ -18,7 +18,7 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.info(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your cart')
@@ -30,14 +30,16 @@ def add_to_bag(request, item_id):
 def adjust_bag(request, item_id):
     """ Update products quantity to a bag to be stored for checkout """
 
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Added to your bag')
+        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your cart')
   
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -47,9 +49,11 @@ def remove_from_bag(request, item_id):
     """ Remove products from bag """
 
     try:
+        product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('bag', {})
 
         bag.pop(item_id)
+        messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
