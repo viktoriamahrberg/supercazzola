@@ -121,6 +121,11 @@ a.dropdown-item:focus {
     z-index: 99999999999;
 
 }
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 /* .custom-toast {
     overflow: visible;
