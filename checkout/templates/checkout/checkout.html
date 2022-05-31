@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="header-font">Checkout</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p class="small">Please fill out the form below to complete your order
+                </p>
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <fieldset class="px-2 mb-5 text-black">
+                        <legend class="fiedldset-label text-black">Your Details</legend>
+                    
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                </fieldset>
+                    <fieldset class="px-3 mb-5 text-black">
+                    <legend class="fiedldset-label text-black">Shipping</legend>
+                    {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address | as_crispy_field }}
+                        {{ order_form.optional_address | as_crispy_field }}
+                        {{ order_form.city | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
+                        <div class="form-check form-check-inline float-right mr-0">
+							{% if user.is_authenticated %}
+								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+							{% else %}
+								<label class="form-check-label" for="id-save-info">
+                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                </label>
+							{% endif %}
+						</div>
+                </fieldset>
+                    <fieldset class="px-3 text-black">
+                    <legend class="fiedldset-label text-black">Payment</legend>
+                    <!-- Holds the stripe payment field -->
+                    <div class="mb-3" id="card-element"></div>
+                    <!-- Error with payment div -->
+                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                </fieldset>
+                <a href="" class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
+                    <span>PAY TOTAL: €{{ grand_total|floatformat:2 }}</span>
+                </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
