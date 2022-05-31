@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
-
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib import messages
+from products.models import Product
 
 def view_bag(request):
     """ View to return shopping bag page """
@@ -10,14 +11,17 @@ def view_bag(request):
 def add_to_bag(request, item_id):
     """ View to add products to a bag to be stored for checkout """
 
+    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
+        messages.info(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
+        messages.success(request, f'Added {product.name} to your cart')
     
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -31,6 +35,7 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
+        messages.success(request, f'Added to your bag')
     else:
         bag.pop(item_id)
   
