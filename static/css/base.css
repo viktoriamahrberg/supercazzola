@@ -41,6 +41,11 @@ body {
     color: #000;
 }
 
+.card-img-top {
+    max-height: 250px !important;
+    object-fit: contain !important;
+
+}
 
 .product-container a {
     color: #000;
