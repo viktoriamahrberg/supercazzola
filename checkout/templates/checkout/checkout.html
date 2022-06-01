@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -19,6 +20,7 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="header-font">Checkout</h2>
+                <hr class="w-100">
             </div>
         </div>
         <div class="row">
@@ -29,44 +31,104 @@
                     {% csrf_token %}
                     <fieldset class="px-2 mb-5 text-black">
                         <legend class="fiedldset-label text-black">Your Details</legend>
-                    
-                    {{ order_form.full_name | as_crispy_field }}
-                    {{ order_form.email | as_crispy_field }}
-                </fieldset>
+
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
                     <fieldset class="px-3 mb-5 text-black">
-                    <legend class="fiedldset-label text-black">Shipping</legend>
-                    {{ order_form.phone_number | as_crispy_field }}
+                        <legend class="fiedldset-label text-black">Shipping</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.street_address | as_crispy_field }}
                         {{ order_form.optional_address | as_crispy_field }}
                         {{ order_form.city | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                                </label>
-							{% endif %}
-						</div>
-                </fieldset>
+                            {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                                profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
+                                checked>
+                            {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                            {% endif %}
+                        </div>
+                    </fieldset>
                     <fieldset class="px-3 text-black">
-                    <legend class="fiedldset-label text-black">Payment</legend>
-                    <!-- Holds the stripe payment field -->
-                    <div class="mb-3" id="card-element"></div>
-                    <!-- Error with payment div -->
-                    <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <legend class="fiedldset-label text-black">Payment</legend>
+                        <!-- Holds the stripe payment field -->
+                        <div class="mb-3" id="card-element"></div>
+                        <!-- Error with payment div -->
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                </fieldset>
-                <a href="" class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
-                    <span>PAY TOTAL: €{{ grand_total|floatformat:2 }}</span>
-                </a>
+                    </fieldset>
+                    <a href="" class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
+                        <span>PAY TOTAL: €{{ grand_total|floatformat:2 }}</span>
+                    </a>
                 </form>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                {% if grand_total %}
+                <p class="pt-0 text-black small"> Order Summary ({{ product_count }})</p>
+                <div class="row">
+                    <div class="col-3">
+                        <p class="small">Item</p>
+                    </div>
+                    <div class="col-6">
+
+                    </div>
+                    <div class="col-3">
+                        <p class="small">Price</p>
+                    </div>
+                </div>
+                <div class="checkout-summary">
+                    {% for item in bag_items %}
+                    <div class="row">
+                        <div class="col-3">
+                            {% if item.product.image %}
+                            <img class="img-thumbnail" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            {% else %}
+                            <img class="img-thumbnail" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            {% endif %}
+                        </div>
+                        <div class="col-6">
+                            <p class="my-0 small">{{ item.product.name }}</p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="my-0 small"> €{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            </div>
+                    </div>
+
+                    {% endfor %}
+           
+                    <hr class="my-2">
+                    <div class="row text-black">
+                        <div class="col-6 offset-3">
+                            <p class="my-0 small">Subtotal:</p>
+                            <p class="my-0 small">Shipping:</p>
+                            <p class="my-0 small ">Total:</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="my-0 small">€{{ total|floatformat:2 }}</p>
+                            <p class="my-0 small">€{{ delivery|floatformat:2 }}</p>
+                            <p class="my-0 small"><strong>€{{ grand_total|floatformat:2 }}</strong></p>
+                        </div>
+                    </div>
+                  
+                </div>
+
+
+        
+                   
+                    {% endif %}
+                </div>
+               
             </div>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

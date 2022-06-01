@@ -14,13 +14,17 @@
       </div>
     </div>
     {% if grand_total %}
-    <hr class=" w=25">
+    <hr class="w=25">
     <p class="toast-body pt-0 text-black"> Your bag ({{ product_count }})</p>
     <div class="bag-notification-wrapper">
       {% for item in bag_items %}
       <div class="row">
         <div class="col-3">
-          <img class="w-100" src="{{ item.product.image.url }}">
+          {% if item.product.image %}
+          <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+          {% else %}
+          <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+          {% endif %}
         </div>
         <div class="col-9">
           <p class="my-0">{{ item.product.name }}</p>
