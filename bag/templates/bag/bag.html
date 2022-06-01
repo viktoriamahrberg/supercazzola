@@ -98,9 +98,9 @@
                                     <tr>
                                         <td colspan="5" class="pt-5 text-right">
                                             <h2 class="header-font">Cart Totals</h2>
-                                            <h6 class="text-uppercase">Subtotal: €{{ total|floatformat:2 }}</h6>
-                                            <h6 class="text-uppercase">Shipping: €{{ delivery|floatformat:2 }}</h6>
-                                            <h6 class="mt-4 text-uppercase"><strong>Total:
+                                            <p>Subtotal: €{{ total|floatformat:2 }}</h6>
+                                            <p>Shipping: €{{ delivery|floatformat:2 }}</h6>
+                                            <p><strong>Total:
                                                     €{{ grand_total|floatformat:2 }}</strong>
                                             </h6>
                                             {% if free_delivery_delta > 0 %}
@@ -113,7 +113,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="text-right">
-                                            <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
+                                            <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5 text-black">
                                                 <span class="header-font">Keep Shopping</span>
                                             </a>
                                             <a href="{% url 'checkout'%}" class="btn btn-black rounded-0 text-uppercase mt-5">
