@@ -1,16 +1,18 @@
+/* General */
+
 html {
     height: 100%;
 }
+ul li {
+    list-style: none;
+}
+
+/* Text */
 .logo {
     font-family: 'Londrina Solid';
     font-size: 8vh;
     color: #000;
 }
-
-ul li {
-    list-style: none;
-}
-
 .header-font {
     font-family: 'Permanent Marker';
 }
@@ -21,6 +23,7 @@ ul li {
     color: #DDC445 !important;
 }
 
+/* Images home page */
 .home-cover {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover; 
@@ -34,6 +37,16 @@ ul li {
 .home-cover-private {
     background-color: #292F30;
 }
+    /* background: url('/media/non-pretentious-wine.jpg') no-repeat center center;
+    object-fit: contain;
+} */
+/* .private-shop-container {
+    width: 100%;
+    height: 100%
+        object-fit: cover;
+      } */
+    
+    /*  */
 
 body {
     font-family: 'Overpass', sans-serif;
