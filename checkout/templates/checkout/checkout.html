@@ -91,9 +91,9 @@
                     <div class="row">
                         <div class="col-3">
                             {% if item.product.image %}
-                            <img class="img-thumbnail" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                            <img class="toast-image" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="img-thumbnail" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                            <img class="toast-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                             {% endif %}
                         </div>
                         <div class="col-6">
@@ -126,6 +126,13 @@
 
         </div>
     </div>
+</div>
+<div id="loading-overlay">
+    <h1 class="text-light text-center header-font loading-spinner">
+        <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+    </h1>
 </div>
 {% endblock %}
 
