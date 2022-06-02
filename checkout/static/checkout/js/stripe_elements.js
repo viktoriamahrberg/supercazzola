@@ -20,18 +20,6 @@ card.mount("#card-element");
 
 
 // Handle validation errors on the card
-
-
-// card.on('change', function(event) {
-//     var displayError = document.getElementById('card-errors');
-//     if (event.error) {
-//       displayError.textContent = event.error.message;
-//     } else {
-//       displayError.textContent = '';
-//     }
-// });
-
-
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
     if (event.error) {
@@ -57,6 +45,28 @@ form.addEventListener('submit', function(ev) {
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
+            billing_details: {
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.phone_number.value),
+                email: $.trim(form.email.value),
+                address:{
+                    line1: $.trim(form.street_address.value),
+                    line2: $.trim(form.optional_address.value),
+                    city: $.trim(form.city.value),
+                    country: $.trim(form.country.value),
+                }
+            }
+        },
+        shipping: {
+            name: $.trim(form.full_name.value),
+            phone: $.trim(form.phone_number.value),
+            address:{
+                line1: $.trim(form.street_address.value),
+                line2: $.trim(form.optional_address.value),
+                city: $.trim(form.city.value),
+                postal_code: $.trim(form.postcode.value),
+                country: $.trim(form.country.value),
+            }
         }
     }).then(function(result) {
         if (result.error) {
