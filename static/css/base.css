@@ -55,6 +55,11 @@ body {
 a {
     color: #000;
 }
+
+footer a,
+footer p {
+    color:#fff;
+}
 .text-primary,
 .text-primary:hover,
 .text-primary:active,

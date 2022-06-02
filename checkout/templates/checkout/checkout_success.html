@@ -24,19 +24,125 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <p class="small">Your order information below:
-                </p>
-                
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-7"></div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-7 text-right">
+
+            <div class="col-12 col-lg-7  mx-auto">
+                <div class="order-confirmation-wrapper p-2 border">
+                    <div class="row">
+                        <div class="col mb-2">
+                            <small class=" text-muted text-uppercase">Order Info:</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black small">Order Number</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0 small">{{ order.order_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black small">Order Date</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-5 small">{{ order.date }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-2">
+                            <hr>
+                            <small class="text-muted text-uppercase">Order Summary:</small>
+                        </div>
+                    </div>
+                    {% for item in order.lineitems.all %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-0 text-black font-weight-bold">
+                                {{ item.product.name }} </p>
+                            <p class="small text-black">
+                                Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="small mb-0">€{{ item.product.price }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <p class="mb-5"></p>
+
+                    <div class="row">
+                        <div class="col mb-2">
+                            <hr>
+                            <small class="text-muted text-uppercase">Shipping Details:</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-0 text-black">{{ order.full_name }}</p>
+                            <p class="small mb-0 text-black">{{ order.street_address }}</p>
+                            {% if order.optional_address %}
+                            <p class="small mb-0 text-black">{{ order.optional_address }}</p>
+                            {% endif %}
+                            <p class="small mb-0 text-black">{{ order.post_code }}</p>
+                            <p class="small mb-0 text-black">{{ order.city }}</p>
+                            <p class="small mb-0 text-black">{{ order.country }}</p>
+                            <p class="small mb-5 text-black">Tel: {{ order.phone_number }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-2">
+                            <hr>
+                            <small class="text-muted text-uppercase">Total:</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-0 text-black">Subtotal</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0 small">{{ order.order_total }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="small mb-0 text-black">Shipping</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="small mb-0">{{ order.delivery_cost }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black small font-weight-bold">Total</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="small mb-0 font-weight-bold">{{ order.grand_total }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    {% endblock %}
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to profile</span>
+                </a>
 
-
+                {% else %}
+                <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5 text-black">
+                    <span class="header-font">Take me Home</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
