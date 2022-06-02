@@ -28,7 +28,8 @@ ul li {
 
 }
 .home-cover-business {
-    background-color: #DDC445;
+    /* background: url('/media/home.jpg') no-repeat center center; */
+    background-color: #fff;
 }
 .home-cover-private {
     background-color: #292F30;
@@ -200,6 +201,10 @@ input.border-black:hover {
 .border-black:active,
 .border-black:hover {
     background-color: #DDC445;
+}
+
+.page-footer {
+    background-color: #292F30;
 }
 
 /* -------------------------------- Media Queries */
