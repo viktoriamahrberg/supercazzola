@@ -22,12 +22,28 @@ card.mount("#card-element");
 // Handle validation errors on the card
 
 
-card.on('change', function(event) {
-    var displayError = document.getElementById('card-errors');
+// card.on('change', function(event) {
+//     var displayError = document.getElementById('card-errors');
+//     if (event.error) {
+//       displayError.textContent = event.error.message;
+//     } else {
+//       displayError.textContent = '';
+//     }
+// });
+
+
+card.addEventListener('change', function (event) {
+    var errorDiv = document.getElementById('card-errors');
     if (event.error) {
-      displayError.textContent = event.error.message;
+        var html = `
+            <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+        $(errorDiv).html(html);
     } else {
-      displayError.textContent = '';
+        errorDiv.textContent = '';
     }
 });
 
@@ -46,7 +62,6 @@ form.addEventListener('submit', function(ev) {
             var errorDiv = document.getElementById('card-errors');
             var html = `
                 <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);

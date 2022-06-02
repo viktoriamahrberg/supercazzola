@@ -65,9 +65,10 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-                    <a href="" class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
+
+                    <button id="submit-button" class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
                         <span>PAY TOTAL: €{{ grand_total|floatformat:2 }}</span>
-                    </a>
+                    </button>
                 </form>
             </div>
 

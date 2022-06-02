@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect, reverse 
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages 
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import OrderLineItem
+from .models import Order, OrderLineItem
 from bag.contexts import bag_contents
 from products.models import Product
 
@@ -44,12 +44,13 @@ def checkout(request):
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database."
-                        "Please call us for assistance!")
+                        "Please drop us an email.")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
+            order_number = order.order_number
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -86,3 +87,20 @@ def checkout(request):
     return render(request, template, context)
 
 
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully completed!')
+
+    if 'bag' in request.session:
+        del request.session['bag']
+    
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+    }
+
+    return render(request, template, context)
