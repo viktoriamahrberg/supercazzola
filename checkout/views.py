@@ -75,18 +75,18 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-            order_number = order.order_number
+
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
-
     else:
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, f'There is nothing in your cart at the moment')
             return redirect(reverse('products'))
+            
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)

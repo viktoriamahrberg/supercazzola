@@ -6,6 +6,7 @@ from products.models import Product
 import json
 import time
 
+
 class StripeWH_Handler:
     """
     Stripe webhooks handler
@@ -41,7 +42,7 @@ class StripeWH_Handler:
                 shipping_details.address[field] = None
 
         # Assuming the order doesn't exist in our database
-            order_exists = False
+        order_exists = False
         attempt = 1
         while attempt <= 5:
             try:
@@ -102,10 +103,10 @@ class StripeWH_Handler:
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
-        def handle_payment_intent_failed(self, event):
-            """
-            Handle payment intent payment failed event from Stripe
-            """
-            return HttpResponse(
-                content=f'Unhandled webhook received: {event["type"]}',
-                status=200)
+    def handle_payment_intent_failed(self, event):
+        """
+        Handle payment intent payment failed event from Stripe
+        """
+        return HttpResponse(
+            content=f'Unhandled webhook received: {event["type"]}',
+            status=200)
