@@ -14,7 +14,7 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 transparent;
+  box-shadow: 0px 1px 1px 0 transparent;
 }
 
 .StripeElement--webkit-autofill {
@@ -39,12 +39,19 @@
 
 select, 
 select option {
-  color: #000;
+  color: #292F30;
 }
+
+/* select:focus, 
+select:active, 
+select option:focus,
+select option:active  {
+  box-shadow: none;
+} */
 
 select:invalid,
 select option[value=''] {
-  color: #e7e5d2 !important;
+  color: #292F30 !important;
 }
 
 #loading-overlay {
