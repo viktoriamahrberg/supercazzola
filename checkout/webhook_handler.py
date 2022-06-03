@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+from .models import Order, OrderLineItem
+from products.models import Product
+
+import json
+import time
 
 class StripeWH_Handler:
     """
@@ -22,15 +27,85 @@ class StripeWH_Handler:
         Handle payment intent succeeded event from Stripe
         """
         intent = event.data.object
-        print(intent)
+        pid = intent.id
+        bag = intent.metadata.bag
+        save_info = intent.metadata.save_info
+
+        billing_details = intent.charges.data[0].billing_details
+        shipping_details = intent.shipping
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
+
+        # Clean out data in shipping details field
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
+
+        # Assuming the order doesn't exist in our database
+            order_exists = False
+        attempt = 1
+        while attempt <= 5:
+            try:
+                order = Order.objects.get(
+                    full_name__iexact=shipping_details.name,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    city__iexact=shipping_details.address.city,
+                    street_address__iexact=shipping_details.address.line1,
+                    optional_address__iexact=shipping_details.address.line2,
+                    grand_total=grand_total,
+                    original_bag=bag,
+                    stripe_pid=pid,
+                )
+                order_exists = True
+                break
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+        if order_exists:
+            return HttpResponse(
+                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                status=200)
+        # If order doesn't exist it will be created
+        else:
+            order = None
+            try:
+                order = Order.objects.create(
+                    full_name=shipping_details.name,
+                    email=billing_details.email,
+                    phone_number=shipping_details.phone,
+                    country=shipping_details.address.country,
+                    postcode=shipping_details.address.postal_code,
+                    city=shipping_details.address.city,
+                    street_address=shipping_details.address.line1,
+                    optional_address=shipping_details.address.line2,
+                    grand_total=grand_total,
+                    original_bag=bag,
+                    stripe_pid=pid,
+                )
+                for item_id, quantity in json.loads(bag).items():
+                    product = Product.objects.get(id=item_id)
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=quantity,
+                    )
+                    order_line_item.save()
+            except Exception as e:
+                if order:
+                    order.delete()
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
-    def handle_payment_intent_failed(self, event):
-        """
-        Handle payment intent payment failed event from Stripe
-        """
-        return HttpResponse(
-            content=f'Unhandled webhook received: {event["type"]}',
-            status=200)
+        def handle_payment_intent_failed(self, event):
+            """
+            Handle payment intent payment failed event from Stripe
+            """
+            return HttpResponse(
+                content=f'Unhandled webhook received: {event["type"]}',
+                status=200)
