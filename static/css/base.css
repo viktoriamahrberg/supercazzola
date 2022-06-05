@@ -150,12 +150,10 @@ input.border-black:hover {
     border-radius: 0;
 
 }
-.allauth-accounts-form input::placeholder {
-    color: red;
-}
+
 
 .allauth-accounts-form input::placeholder {
-    color: #ffc107;
+    color: #000;
 }
 
 .allauth-accounts-form label:not([for='id_remember']) {
