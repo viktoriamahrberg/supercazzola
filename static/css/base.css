@@ -7,20 +7,46 @@ ul li {
     list-style: none;
 }
 
+a {
+    color: #000;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    background-size: cover;
+    color: #000;
+}
+
 /* Text */
 .logo {
     font-family: 'Londrina Solid';
     font-size: 8vh;
     color: #000;
 }
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
 .header-font {
     font-family: 'Permanent Marker';
 }
+
 .text-muted {
     color: #292F30 !important;
 }
+
 .text-info {
     color: #DDC445 !important;
+}
+
+.text-black {
+    color: #000 !important;
 }
 
 /* Images home page */
@@ -30,10 +56,12 @@ ul li {
     height: calc(100vh-135px);
 
 }
+
 .home-cover-business {
     /* background: url('/media/home.jpg') no-repeat center center; */
     background-color: #fff;
 }
+
 .home-cover-private {
     background-color: #292F30;
 }
@@ -48,31 +76,54 @@ ul li {
     
     /*  */
 
-body {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
-    background-size: cover;
-    color: #000;
-}
 
+/* Images */
 .card-img-top {
     max-height: 250px !important;
     object-fit: contain !important;
-
 }
 
-.product-container a {
-    color: #000;
+.img-thumbnail {
+    max-width: 50%;
 }
 
-a {
-    color: #000;
+.cart-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
+
+
+/* Footer */
 
 footer a,
 footer p {
     color:#fff;
 }
+
+.page-footer {
+    background-color: #292F30;
+}
+
+/* Form */
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+input.border-black:focus,
+input.border-black:active,
+input.border-black:hover {
+    background-color: transparent;
+}
+
+.border-black:active,
+.border-black:hover {
+    background-color: #DDC445;
+}
+
 .text-primary,
 .text-primary:hover,
 .text-primary:active,
@@ -80,6 +131,37 @@ footer p {
     color: #ffc107 !important;
 }
 
+.product-container a {
+    color: #000;
+}
+
+.border {
+    color: #000 !important;
+}
+
+/* Allauth account forms */
+
+.allauth-accounts-form p {
+    color:#000;   
+}
+
+.allauth-accounts-form input {
+    border-color: #000;
+    border-radius: 0;
+
+}
+.allauth-accounts-form input::placeholder {
+    color: red;
+}
+
+.allauth-accounts-form input::placeholder {
+    color: #ffc107;
+}
+
+.allauth-accounts-form label:not([for='id_remember']) {
+    display: none;
+}
+/* Button & Links */
 
 .btn-outline-none:hover,
 .btn-outline-none:active,
@@ -101,8 +183,30 @@ a.dropdown-item:focus {
     outline: 0;
     box-shadow: none!important;
 }
+
 .btn-small {
     background-color: transparent;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #292F30;
+    color: white;
 }
 
 .btt-button {
@@ -117,7 +221,6 @@ a.dropdown-item:focus {
     cursor: pointer;
 }
 
-
 .btt-link:hover,
 .btt-link:active,
 .btt-link:focus {
@@ -125,15 +228,6 @@ a.dropdown-item:focus {
     text-decoration: none;
     outline: 0;
     box-shadow: none!important;
-}
-
-
-.img-thumbnail {
-    max-width: 50%;
-}
-
-.border {
-    color: #000 !important;
 }
 
 
@@ -158,18 +252,6 @@ a.dropdown-item:focus {
     margin-right: auto;
     display: block;
 }
-.cart-image {
-    max-width: 100px;
-    max-height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-
-/* .custom-toast {
-    overflow: visible;
-} */
 
 .toast-capper {
     height: 2px;
@@ -190,56 +272,6 @@ a.dropdown-item:focus {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #292F30;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-input.border-black:focus,
-input.border-black:active,
-input.border-black:hover {
-    background-color: transparent;
-}
-
-.border-black:active,
-.border-black:hover {
-    background-color: #DDC445;
-}
-
-.page-footer {
-    background-color: #292F30;
-}
 
 /* -------------------------------- Media Queries */
 
