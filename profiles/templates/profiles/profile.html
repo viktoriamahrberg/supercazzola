@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid py-0">
     <div class="container mb-2">
         <div class="row">
             <div class="col text-center mt-3">
@@ -32,34 +32,50 @@
                     <button class="btn btn-black rounded-0 text-uppercase mt-5 mb-5 w-100">
                         <span>Update Information</span>
                     </button>
-                    </form>
+                </form>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="small">Your Order History
-                </p>
-                {{ orders }}
-                {{ orders.image_url }}
+                <div class="order-history">
+                    <p class="pt-0 text-black small">Order History</p>
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="small">Order Number</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="small">Order Date</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="small">Items</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="small">Price</p>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        {% for order in orders %}
+                        <div class="row">
+                            <div class="col-3">
+                                {{ order.order_number|truncatechars:6 }}
+                            </div>
+                            <div class="col-3">
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                    <li class="small">
+                                        {{ item.product.name }} x{{ item.quantity }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <p class="my-0 small"> €{{ item.product.price }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <hr class="my-2">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock %}
-
-<!-- {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascipt">
-    let countrySelected = $('#id_default_country').val();
-    if(!countrySelected) {
-        $('#id_default_country').css('color': '#DDC445');
-    };  
-    $('#id_default_country').change(function() {
-        countrySelected = $(this).val();
-        if(!countrySelected) {
-            $(this).css('color', '#495057');
-        } else {
-            $(this).css('color', '#000');
-        }
-    });
-
-    </script> -->
 {% endblock %}

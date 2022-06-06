@@ -8,3 +8,8 @@
     border-radius: 0;
     border-color: #000;
 }
+
+.order-history {
+    max-height: 493px;
+    overflow: auto;
+}

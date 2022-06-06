@@ -5,6 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 
+
 def profile(request):
     """ 
     Renders user's profile account
@@ -28,3 +29,4 @@ def profile(request):
     }
 
     return render(request, template, context)
+
