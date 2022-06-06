@@ -1,0 +1,23 @@
+Thank you {{ order.full_name }}, for ordering your wine with us.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+We will ship your order shortly to the below address:
+{{ order.street_address }}
+{{ order.postcode }}
+{{ order.city }}
+Phone number: {{ order.phone_number }}
+
+
+Subtotal: €{{ order.order_total }}
+Shipping: €{{ order.delivery_cost }}
+Total: €{{ order.grand_total }}
+
+
+
+We hope you will enjoy your wine!
+
+Sincerely,
+
+Supercazzola
