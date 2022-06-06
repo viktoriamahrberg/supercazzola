@@ -37,10 +37,29 @@
             <div class="col-12 col-lg-6">
                 <p class="small">Your Order History
                 </p>
+                {{ orders }}
+                {{ orders.image_url }}
             </div>
         </div>
     </div>
 </div>
-{{ profile }}
+{% endblock %}
 
+<!-- {% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascipt">
+    let countrySelected = $('#id_default_country').val();
+    if(!countrySelected) {
+        $('#id_default_country').css('color': '#DDC445');
+    };  
+    $('#id_default_country').change(function() {
+        countrySelected = $(this).val();
+        if(!countrySelected) {
+            $(this).css('color', '#495057');
+        } else {
+            $(this).css('color', '#000');
+        }
+    });
+
+    </script> -->
 {% endblock %}
