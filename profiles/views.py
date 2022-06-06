@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import Http404
 from django.contrib import messages
-
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from products.models import Product
 
 
 def profile(request):
@@ -29,4 +30,3 @@ def profile(request):
     }
 
     return render(request, template, context)
-

@@ -62,8 +62,8 @@
                     {% endif %}
                     <!-- heart -->
                     <div class="bg-white text-right">
-                        {% if product.rating %}
-                        <a href=""><i class="fa-solid fa-heart">heart</i>{{ product.rating }}</a>
+                        {% if product.favourite %}
+                        <a href="{% url 'add_to_wishlist' product.id %}"><i class="fa-solid fa-heart">heart</i>{{ product.favourites }}</a>
                         {% else %}
                         <a href=""><i class="fa-regular fa-heart"></i></a>
                         {% endif %}
