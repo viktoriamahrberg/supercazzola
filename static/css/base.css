@@ -3,6 +3,7 @@
 html {
     height: 100%;
 }
+
 ul li {
     list-style: none;
 }
@@ -59,11 +60,11 @@ body {
 
 .home-cover-business {
     /* background: url('/media/home.jpg') no-repeat center center; */
-    background-color: #fff;
+    background-color: #6BAA73;
 }
 
 .home-cover-private {
-    background-color: #292F30;
+    background-color: #7C5E41;
 }
     /* background: url('/media/non-pretentious-wine.jpg') no-repeat center center;
     object-fit: contain;

@@ -115,6 +115,8 @@ Color: #DDC445
 
 - [Colormind.io](http://colormind.io/) - Color palette picker 
 
+- [How to make footer stay at bottom with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) 
+
 
 
 
