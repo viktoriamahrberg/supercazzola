@@ -3,24 +3,52 @@ from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import WishlistItem
+from .models import Wishlist
 from products.models import Product
 
+
+@login_required
+def wishlist(request):
+    """
+    View to render the user's wishlist
+    """
+    wishlist = None
+    try:
+        wishlist = Wishlist.objects.get(user=request.user)
+    except Wishlist.DoesNotExist:
+        pass
+
+    context = {
+        'wishlist': wishlist,
+    }
+
+    return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required
 def add_to_wishlist(request, product_id):
     """
-    Add product to My Wishlist
+    Add product to My Wishlist for logged in users
     """
     product = get_object_or_404(Product, pk=product_id)
-    try:
-        wishlistitem = get_object_or_404(WishlistItem, user=request.user.id)
-    except Http404:
-        wishlistitem = WishlistItem.objects.create(user=request.user)
-    else:
-        wishlistitem.product.add(product)
-        messages.info(request, f'{product.name} was added to My Wishlist.')
-        return redirect(reverse('products'))
+
+    wishlist, _ = Wishlist.objects.get_or_create(user=request.user)
+    wishlist.products.add(product)
+    messages.info(request, f'{product.name} was added to My Wishlist.')
+    
+    return redirect(reverse('products'))
 
 
+@login_required
+def remove_from_wishlist(request, product_id):
+    """
+    Remove product from My Wishlist
+    """
+    wishlist = Wishlist.objects.get(user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Remove product from the wishlist
+    wishlist.products.remove(product)
+    messages.info(request, f'{product.name} was removed from your wishlist')
+
+    return redirect(reverse('products'))
