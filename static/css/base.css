@@ -64,7 +64,9 @@ body {
 
 .home-cover-business {
     /* background: url('/media/home.jpg') no-repeat center center; */
-    background-color: #6BAA73;
+    /* background-color: #6BAA73; */
+    background-color: #31656B;
+
 }
 
 .home-cover-private {
