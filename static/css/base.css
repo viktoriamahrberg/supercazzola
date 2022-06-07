@@ -156,7 +156,6 @@ input.border-black:hover {
 
 }
 
-
 .allauth-accounts-form input::placeholder {
     color: #000;
 }
@@ -164,8 +163,8 @@ input.border-black:hover {
 .allauth-accounts-form label:not([for='id_remember']) {
     display: none;
 }
-/* Button & Links */
 
+/* Button & Links */
 .btn-outline-none:hover,
 .btn-outline-none:active,
 .btn-outline-none:focus,
@@ -274,6 +273,37 @@ a.dropdown-item:focus {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+
+/* Add/Edit Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #000000;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
 
 
 /* -------------------------------- Media Queries */
