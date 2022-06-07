@@ -46,6 +46,9 @@ body {
 .text-info {
     color: #DDC445 !important;
 }
+.text-danger {
+    color: red !important;
+}
 
 .text-black {
     color: #000 !important;
