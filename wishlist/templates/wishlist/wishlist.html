@@ -14,46 +14,94 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid py-0">
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="header-font">My Wishlist</h2>
-                <hr class="w-100">
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="header-font">My Wishlist</h2>
+            <hr class="w-75">
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="product-container col-10 offset-1">
+
         <div class="row">
-            {% for product in liked_product %}
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div class="card border-0">
-                        {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
-                        {% endif %}
-    
-                        <div class="card-body pb-0">
-                            <p class="header-font mb-0">{{ product.name }}</p>
-                        </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
-                            <div class="row">
-                                <div class="col">
-                                    {% if product.country %}
-                                    <small class="text-muted header-font">{{ product.country }}</small><br>
-                                    {% endif %}
-                                    {% if product.category %}
-                                    <small class="text-muted header-font">{{ product.category.friendly_name }}</small>
-                                    {% endif %}
-                                    <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
-                                </div>
+            {% for product in wishlist.products.all %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="card border-0">
+                    {% if product.image %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    <!-- heart -->
+                    <div class="text-right">
+                        <a href="{% url 'remove_from_wishlist' product.id %}"
+                            aria-label="Remove product from Wishlist"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="card-body pb-0">
+                        <p class="header-font mb-0">{{ product.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                {% if product.country %}
+                                <small class="text-muted header-font">{{ product.country }}</small><br>
+                                {% endif %}
+                                {% if product.category %}
+                                <small class="text-muted header-font">{{ product.category.friendly_name }}</small>
+                                {% endif %}
+                                <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="col-12 d-sm-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-lg-block d-xl-block mb-5">
+            </div>
+            {% endif %}
+
+            {% empty %}
+<!-- Wishlist Page "if" empty -->
+<div class="col-12 p-0">
+<div class="text-center my-4">
+    <h3 class="header-font text-info">You have no items in your wishlist</h3>
+
+    
+        <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
+            <span class="header-font">Keep Shopping</span>
+        </a>
+
+    </div>
+</div>
+{% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
+
 {% endblock %}

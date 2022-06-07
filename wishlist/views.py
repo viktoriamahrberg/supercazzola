@@ -34,9 +34,9 @@ def add_to_wishlist(request, product_id):
 
     wishlist, _ = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
-    messages.info(request, f'{product.name} was added to My Wishlist.')
+    messages.success(request, f'{product.name} was added to My Wishlist.')
     
-    return redirect(reverse('products'))
+    return redirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required
@@ -49,6 +49,6 @@ def remove_from_wishlist(request, product_id):
 
     # Remove product from the wishlist
     wishlist.products.remove(product)
-    messages.info(request, f'{product.name} was removed from your wishlist')
+    messages.info(request, f'{product.name} was removed from My Wishlist')
 
-    return redirect(reverse('products'))
+    return redirect(request.META.get('HTTP_REFERER'))
