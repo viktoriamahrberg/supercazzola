@@ -303,9 +303,27 @@ a.dropdown-item:focus {
     border-radius: 0;
 }
 
+/* Mailchimp form */
 
+div.mc-field-group label {
+    visibility: hidden;
+}
+div.mc-field-group input {
+    border:#fff;
+    border-radius: 0;
+    box-shadow: none;
+}
+.btn-yellow {
+    background: black;
+    color: white;
+}
 
-
+.btn-yellow:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #DDC445;
+    color: white;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
