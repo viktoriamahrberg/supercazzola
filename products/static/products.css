@@ -1,0 +1,7 @@
+.like .fa-heart {
+    color: red !important;
+  }
+.unlike .fa-heart{
+    color: red !important;
+}
+
