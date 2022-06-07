@@ -31,11 +31,12 @@ def add_to_wishlist(request, product_id):
     Add product to My Wishlist for logged in users
     """
     product = get_object_or_404(Product, pk=product_id)
-
     wishlist, _ = Wishlist.objects.get_or_create(user=request.user)
-    wishlist.products.add(product)
-    messages.success(request, f'{product.name} was added to My Wishlist.')
-    
+    if product in wishlist.products.all():
+        messages.info(request, f'{product.name} has already been added to My Wishlist')
+    else:
+        wishlist.products.add(product)
+        messages.success(request, f'{product.name} was added to My Wishlist.')
     return redirect(request.META.get('HTTP_REFERER'))
 
 

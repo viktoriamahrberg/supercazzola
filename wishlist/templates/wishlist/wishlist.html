@@ -76,19 +76,19 @@
             {% endif %}
 
             {% empty %}
-<!-- Wishlist Page "if" empty -->
-<div class="col-12 p-0">
-<div class="text-center my-4">
-    <h3 class="header-font text-info">You have no items in your wishlist</h3>
+            <!-- Wishlist page "if" empty -->
+            <div class="col-12 p-0">
+                <div class="text-center my-4">
+                    <h3 class="header-font text-info">You have no items in your wishlist</h3>
 
-    
-        <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
-            <span class="header-font">Keep Shopping</span>
-        </a>
 
-    </div>
-</div>
-{% endfor %}
+                    <a href="{% url 'products' %}" class="btn btn-outline-none rounded-0 mt-5">
+                        <span class="header-font">Keep Shopping</span>
+                    </a>
+
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
