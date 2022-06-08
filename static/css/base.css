@@ -317,7 +317,6 @@ div.mc-field-group input {
     background: black;
     color: white;  
     border: none;
-    box-shadow: none;
 }
 
 .btn-yellow:hover,
@@ -325,7 +324,6 @@ div.mc-field-group input {
 .btn-black:focus {
     background: #DDC445;
     color: white;
-    box-shadow: none;
     border: none;
 }
 /* -------------------------------- Media Queries */
@@ -354,10 +352,43 @@ div.mc-field-group input {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 80px;
     }
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .display-4.header-font.text-black {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    } 
+    h3.header-font {
+        font-size: 1.1rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .nav-item {
+        padding-top: 1rem;
+    }
+    .text-muted {
+        font-size: .9rem;
+    }
+    .sort-selection > a {
+        padding-left: 0;
+    }
+    .btn-lg,
+    .btn-lg {
+        padding: .350rem .350rem;
+        font-size: .85rem;
     }
 }
