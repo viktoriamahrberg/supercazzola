@@ -278,7 +278,6 @@ a.dropdown-item:focus {
 
 
 /* Add/Edit Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -306,18 +305,19 @@ a.dropdown-item:focus {
 }
 
 /* Mailchimp form */
-
 div.mc-field-group label {
     visibility: hidden;
 }
 div.mc-field-group input {
     border:#fff;
     border-radius: 0;
-    box-shadow: none;
+   
 }
 .btn-yellow {
     background: black;
-    color: white;
+    color: white;  
+    border: none;
+    box-shadow: none;
 }
 
 .btn-yellow:hover,
@@ -325,6 +325,8 @@ div.mc-field-group input {
 .btn-black:focus {
     background: #DDC445;
     color: white;
+    box-shadow: none;
+    border: none;
 }
 /* -------------------------------- Media Queries */
 
