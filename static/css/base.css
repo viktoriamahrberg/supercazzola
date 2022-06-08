@@ -355,6 +355,10 @@ div.mc-field-group input {
         padding-top: 80px;
     }
 
+    .product-row.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
     body {
         height: calc(100vh - 116px);
     }
@@ -377,8 +381,8 @@ div.mc-field-group input {
     p {
         font-size: 1rem;
     }
-    .nav-item {
-        padding-top: 1rem;
+    .nav-link.main-logo-link {
+        padding-left: 0;
     }
     .text-muted {
         font-size: .9rem;
@@ -390,5 +394,24 @@ div.mc-field-group input {
     .btn-lg {
         padding: .350rem .350rem;
         font-size: .85rem;
+    }
+    h2.logo.logo-font {
+    font-size: 1rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 0.9rem;
+    }
+    .footer-copyright {
+        font-size: .7rem;
+    }
+    .d-flex.social-tags {
+        padding-top: 10px;
+        justify-content: center;
     }
 }
