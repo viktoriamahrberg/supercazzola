@@ -1,0 +1,8 @@
+<h2 class="header-font">Cart Totals</h2>
+<p>Subtotal: €{{ total|floatformat:2 }}</p>
+<p>Shipping: €{{ delivery|floatformat:2 }}</p>
+<p><strong>Total: €{{ grand_total|floatformat:2 }}</strong></p>
+{% if free_delivery_delta > 0 %}
+<p class="mb-1 text-info">
+    Spend another <strong>€{{ free_delivery_delta }}</strong> to get free shipping!</p>
+{% endif %}
