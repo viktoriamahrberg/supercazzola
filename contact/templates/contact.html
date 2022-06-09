@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0">
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="header-font">Contact</h2>
+                <hr class="w-100">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6" class="contact-form">
+                <a href="{% url 'home' %}" class="btn btn-outline-none rounded-0 py-2 text-black">
+                    <span class="header-font">Back Home</span>
+                </a>  
+                <p class="small">Are you a bar owner? Having a quaint little restaurant somewhere? Want to set up a wine
+                    testing for your crew
+                    or just curious to find out more and chat about a collaboration?
+                    Reach out! We'll be happy to hear from you.
+                </p>
+                <form method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button type="submit" class="btn btn-black rounded-0 text-uppercase mb-5 w-100">Send</button>       
+                </div>
+            </form>  
+        </div>
+    </div>
+<div>
+
+
+        {% endblock %}

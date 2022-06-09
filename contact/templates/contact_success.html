@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0">
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="header-font">Thank you!</h2>
+                <hr class="w-100">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+                <p class="header-font text-info">Thank you for reaching out! We'll get back to you soonest.
+                </p>
+                <a href="{% url 'home' %}" class="btn btn-outline-none rounded-0 mt-5 text-black">
+                    <span class="header-font">Take me Home</span>
+                </a>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

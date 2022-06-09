@@ -417,7 +417,9 @@ div.mc-field-group input {
         padding-top: 10px;
         justify-content: center;
     }
-    .increment-qty, .decrement-qty {
+    .increment-qty, 
+    .decrement-qty {
         color: #000;
     }
+
 }

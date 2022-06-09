@@ -1,13 +1,25 @@
 <script type="text/javascript">
 
-// Disables the quantity box at 0 and 99+
+// Disables the quantity box at 0 and 99+ on mobile view
 function handleEnableDisable(itemId) {
-    var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+    var currentValue = parseInt($(`#id_qty_${itemId}`).val());
     var minusDisabled = currentValue < 2;
     var plusDisabled = currentValue > 98;
-    $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+    $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
 }
+
+// Disables the quantity box at 0 and 99+ on full screen view
+function handleEnableDisable(itemId) {
+    var currentValue = parseInt($(`#id_qty_full_${itemId}`).val());
+    var minusDisabled = currentValue < 2;
+    var plusDisabled = currentValue > 98;
+    $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+    $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+}
+
+
+
 
 var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
