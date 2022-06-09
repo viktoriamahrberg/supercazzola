@@ -1,15 +1,14 @@
 # About
 
-**Supercazzola** which in italian means *nonsense*; "a phrase devoid of logical sense composed of a random set of real and non-existent words". Let's skip the pretentious talk about wine and just focus on really good wine!
-For us is it just about good, non pretentious natural wines from our firends in Italy and South Africa. They may be the avkommorna från stora klassiska vingårdar som nu experimenterar på egen hand, eller nya vingårdar som bara kör sin grej - så länge vi tycker det är gott are we proud to be your local wine provider in Southern Sweden. Beacuse we assure you - you *will* come back for more. 
-
-Natural wine, or low intervention wine as it's also called, are often described as "nothing added, nothing taken away. 
-Wine as it´s purest. 
+**Supercazzola** which in italian means nonsense; "a phrase devoid of logical sense composed of a random set of real and non-existent words". Let's skip the pretentious talk about wine and just focus on really good wine!
+For us it is just about good, non pretentious low intervention wines from our friends in Italy and South Africa. 
+They may be the sons and daughters from the more classic wineries or new vinyard experimenting and just doing their own thing. Either way, they are making their own paths and pushing wine making into the future, experimenting on their own and providing us with outstanding wines. As long as we find it great, we are proud to be your local wine distributor in Southern Sweden. 
+Because we assure you - you will come back for more. 
 
 
 ## Business Goal
 
-Become the biggest importer of natural wine in Sweden. Targeting the people out there loving wine but may not necessarily not knowing so much about it. 
+Become the biggest importer of natural wine in Sweden. Targeting the people loving wine but may not necessarily know so much about it. 
 
 ## Tone of Voice
 
@@ -17,10 +16,11 @@ We'll share informational and "educational" content in a witty, non pretentious 
 
 ## Business Model
 
-B2C (Buiness to Customer) - A carefully selected e-shop of imported natural wines to sell to winelovers over 21 years old in Sweden. Selection will mainly come from South Africa and Italy, seeing the gap in the market of South African wines, will especially make Supercazzola a name for itself. 
-B2B (Business to business) - A big part of Supercazzolas business model will be to distribute wine to bars and restaurants in the southern part of Sweden. Wine events, wine tastings and 
+B2C (Buiness to Customer) - A carefully selected e-commerce of imported natural wines to sell to winelovers over 21 years old in Sweden. Selection will mainly come from South Africa and Italy, seeing the gap in the market of South African low intervention wines, will especially make Supercazzola a name for itself. 
+B2B (Business to business) - A big part of Supercazzolas business model will be to distribute wine to bars and restaurants in the southern part of Sweden. Wine events, wine tastings and pop-up events will have our presence. 
 
 Since we offer alcoholic beverage we will not have sales nor discounts on our products, but will rather make sure our community have fun at our accessable events and wine tastings, which will be shared by newsletter to those who sign up.
+
 
 ## Target Audience
 
@@ -28,7 +28,6 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 - Informed as well as non-informed winelovers
 - Interests: Music, design/art, going out-ers (bars/restaurants), books and independent magazines
 - Persona: Curious, traveller, informed, openminded, likes spending money on the good stuff in life
-
 
 
 # User Stories
@@ -77,7 +76,6 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 29. As a bar/restaurant owner I want see contact information so that I can potentially buy your wine for my business
 
 
-
 # Features
 
 ## UX Design
@@ -101,12 +99,106 @@ Color: #DDC445
 
 
 
+## Planning / Agile Management
+I used the Github kanban board to create issues and user stories in the early development stages of this project and moved them across the board as I progressed. Link to [Github Project](https://github.com/viktoriamahrberg/supercazzola/projects/1)
+Userstories were oranised in "must-have", "could-have" or "should-have" labels in order to make prioritization of the scope easier. 
+I added userstories as I went on and realised what I want to add to the site in the future.
 
 
-# Technology
+## Features to be implemented in future:
 
-[Bootstrap 4.6 boilerplate](https://getbootstrap.com/docs/4.6/getting-started/introduction/) 
 
+
+# Technology used
+
+- **Python:**
+    - Python modules used:      
+        - asgiref==3.5.2
+        - boto3==1.24.4
+        - botocore==1.27.4
+        - dj-database-url==0.5.0
+        - Django==3.2
+        - django-allauth==0.41.0
+        - django-countries==7.2.1
+        - django-crispy-forms==1.14.0
+        - django-storages==1.12.3
+        - gunicorn==20.1.0
+        - jmespath==1.0.0
+        - oauthlib==3.2.0
+        - Pillow==9.1.1
+        - psycopg2-binary==2.9.3
+        - python3-openid==3.2.0
+        - pytz==2022.1
+        - requests-oauthlib==1.3.1
+        - s3transfer==0.6.0
+        - sqlparse==0.4.2
+        - stripe==3.2.0
+
+- **[Bootstrap 4.6 boilerplate]**(https://getbootstrap.com/docs/4.6/getting-started/introduction/) 
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Jquery**
+- **Crispyforms** (Display forms)
+- **Heroku Postgres** (Database after deployment)
+- **AWS** S3 Bucket (Storage of static files)
+- **Github** (Project Management and storage for repo)
+- **Gitpod** (Development hosting platform)
+- **Google Dev Tools** (Debugging and check responsiveness)
+- **Google Fonts** (Fonts)
+- **Font Awsome** (Icons)
+- **Balsamiq** (Wireframes)
+- **DBdiagram** (Database schema)
+- **TinyPNG** (Compress image file)
+
+
+## Database
+- SQLite was used in delevopment to store data
+- PostgreSQL was used in production to store data
+
+
+## Data Models
+
+Following models have been created for this project:
+
+Profile App:
+- User - Django AllAuth user account that is being create upon registration
+- User Profile - Storing users contact information, order history and wishlist items
+Product App: 
+- Product - Stores product image, details, price and description
+- Category - Linked to product
+Checkout App:
+- Order - Creates an instance of an order when succesfully progressed with billing/shipping information, a foreign key to the UserProfile and users details. Also includes information of payment, the stripe PID and basket contents.
+- OrderItem - Each orderline of the total Order that includes: product, quantity and price
+Wishlist App:
+- Wishlist - Stores all users liked item
+- WishlistItem - Allowing users to add individual items to their wishlist
+
+### Database Schema
+
+![Database Schema](/readme_images/database_schema.png)
+
+# Testing
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
+
+[Html Checker](https://validator.w3.org/nu) to test HTML
+
+[JSHint](https://jshint.com/) to test Javascript
+
+[PEP8 Validator](http://pep8online.com/) to test all Python files
+
+## Manual Testing
+
+
+## Performance testing
+
+I run Lighthouse tool to check performance of the website. 
+
+![Lighthouse](/static/readme_images/lighthouse.png)
+
+
+
+## Bugs to be debugged after Project Deadline:
 
 
 
