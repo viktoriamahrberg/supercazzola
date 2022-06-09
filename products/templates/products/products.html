@@ -28,7 +28,7 @@
             <div class="col-12 col-md-6 d-flex justify-content-center">
                 <p class="text-muted mt-2 text-center text-md-left">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="header-font"><a href="{% url 'products' %}">Back to All Products</a> | </span>
+                    <span class="header-font h-100"><a href="{% url 'products' %}">Back to All Products</a> | </span>
                     {% endif %}
                     {{ products|length }} Products{% if search_term %} found for
                     <strong>"{{ search_term }}"</strong>{% endif %}
@@ -67,7 +67,7 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
-                    <!-- heart -->
+                    <!-- Wishlist -->
                     <div class="text-right">
                         {% if request.user.is_authenticated %}
                         <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist"><i
