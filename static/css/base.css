@@ -62,27 +62,27 @@ body {
 
 }
 
-.home-cover-business {
-    /* background: url('/media/home.jpg') no-repeat center center; */
+.home-cover-business-image {
+    background: url('/media/b2b_image.jpg') no-repeat center center;
+    background-size: cover;
     /* background-color: #6BAA73; */
-    background-color: #31656B;
+    /* background-color: #31656B; */
+
+}
+.home-cover-business-color {
+    background-color: #DDC445;
+    /* background-color: #31656B; */
 
 }
 
-.home-cover-private {
-    background-color: #7C5E41;
-}
-    /* background: url('/media/non-pretentious-wine.jpg') no-repeat center center;
-    object-fit: contain;
-} */
-/* .private-shop-container {
-    width: 100%;
-    height: 100%
-        object-fit: cover;
-      } */
-    
-    /*  */
+.home-cover-private-image {
+    background: url('/media/b2c_image.jpg') no-repeat center center;
+    background-size: cover;
 
+}
+.home-cover-private-color {
+    background-color: #6BAA73;
+}
 
 /* Images */
 .card-img-top {
@@ -363,6 +363,12 @@ div.mc-field-group input {
         height: calc(100vh - 116px);
     }
 
+    .home-cover {
+        background: none;
+    }
+    div.home-cover-private-image {
+        display: none;
+    }
     .display-4.header-font.text-black {
         font-size: 1.5rem;
     }
