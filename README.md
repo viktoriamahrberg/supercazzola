@@ -91,7 +91,7 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 
 ## Scope
 
-To achieve the user & business goals, the following features will be included in this project:
+To achieve the user and business goals, the following features will be included in this project:
 
 - Responsive navbar
 - Landing page with About Us section and links to relevant pages such Shop and Contact
@@ -108,18 +108,18 @@ To achieve the user & business goals, the following features will be included in
 
 Following models have been created for this project:
 
-Profile App:
-- User - Django AllAuth user account that is being create upon registration
-- User Profile - Storing users contact information, order history and wishlist items
-Product App: 
-- Product - Stores product image, details, price and description
-- Category - Linked to product
-Checkout App:
-- Order - Creates an instance of an order when succesfully progressed with billing/shipping information, a foreign key to the UserProfile and users details. Also includes information of payment, the stripe PID and basket contents.
-- OrderItem - Each orderline of the total Order that includes: product, quantity and price
-Wishlist App:
-- Wishlist - Stores all users liked item
-- WishlistItem - Allowing users to add individual items to their wishlist
+- Profile App:
+    - User - Django AllAuth user account that is being create upon registration
+    - User Profile - Storing users contact information, order history and wishlist items
+- Product App: 
+    - Product - Stores product image, details, price and description
+    - Category - Linked to product
+- Checkout App:
+    - Order - Creates an instance of an order when succesfully progressed with billing/shipping information, a foreign key to the UserProfile and users details. Also includes information of payment, the stripe PID and basket contents.
+    - OrderItem - Each orderline of the total Order that includes: product, quantity and price
+- Wishlist App:
+    - Wishlist - Stores all users liked item
+    - WishlistItem - Allowing users to add individual items to their wishlist
 
 ### Database Schema:
 
@@ -132,18 +132,25 @@ Wishlist App:
 The wireframes differs slightly from the end result, but the main idea is still very much there. A consistent page layout on most pages for a no-surprising user experience with the focus on straight-to-the-point and product sales. 
 Some content is hidden on smaller devices to ensure the mobilescreen gives the user the most important and relevant information. 
 
+**Alert Box:**
 ![Alert Box](/misc/readme_images/Alertbox.png)
 
+**Home:**
 ![Home](/misc/readme_images/Home.png)
 
+**Shop:**
 ![Shop](/misc/readme_images/Shop.png)
 
+**Product Detail:**
 ![Product Detail](/misc/readme_images/Product_detail.png)
 
-![Bag](/misc/readme_images/Bag.png)
+**Cart:**
+![Cart](/misc/readme_images/Bag.png)
 
+**Cehckout:**
 ![Checkout](/misc/readme_images/Checkout_pay.png)
 
+**Thanks for shopping:**
 ![Thanks for shopping](/misc/readme_images/Thanks_for_shopping.png)
 
 
@@ -204,13 +211,6 @@ On top of this I made google searches to see questions that people ask frequentl
 ![SEO Meta keywords](/misc/readme_images/seo_meta.png)
 
 
-
-
-
-
-
-
-
 ## Planning / Agile Management
 I used the Github kanban board to create issues and user stories in the early development stages of this project and moved them across the board as I progressed from TODO -> In Progress -> Done. 
 Link to [Github Project here](https://github.com/viktoriamahrberg/supercazzola/projects/1)
@@ -237,13 +237,11 @@ I set up the project into 3 sprints:
 - Responsiveness 
 
 
-
 ## Features to be implemented in future:
 
 - The legal age to buy alcohol is above 21 so a feature to implement in the future would be to link Bank ID for users to log in and confirm their age.
 
 - Klarna for seamless checkout, as well as remove test mode for Stripe
-
 
 
 
