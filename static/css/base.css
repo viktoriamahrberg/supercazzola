@@ -69,14 +69,13 @@ body {
 .home-cover-business-image {
     background: url('/media/b2b_image.jpg') no-repeat center center;
     background-size: cover;
-    overlay
     /* background-color: #6BAA73; */
     /* background-color: #31656B; */
-
 }
+
 .home-cover-business-color {
-    background-color: #DDC445;
-    /* background-color: #31656B; */
+    background-color: #31656B;
+    /* background-color: ; */
 
 }
 
@@ -86,7 +85,7 @@ body {
 
 }
 .home-cover-private-color {
-    background-color: #6BAA73;
+    background-color: #DDC445;
 }
 
 /* Images */

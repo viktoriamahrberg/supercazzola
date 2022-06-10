@@ -1,21 +1,19 @@
 # About
 
 **Supercazzola** which in italian means nonsense; "a phrase devoid of logical sense composed of a random set of real and non-existent words". Let's skip the pretentious talk about wine and just focus on really good wine!
-For us it is just about good, non pretentious low intervention wines from our friends in Italy and South Africa. 
+For us it is just about good, non pretentious, low intervention wines from our friends in Italy and South Africa. 
 They may be the sons and daughters from the more classic wineries or new vinyard experimenting and just doing their own thing. Either way, they are making their own paths and pushing wine making into the future, experimenting on their own and providing us with outstanding wines. As long as we find it great, we are proud to be your local wine distributor in Southern Sweden. 
 Because we assure you - you will come back for more. 
 
-# UX
-
-The five elements of UX: 
+# UX 
 
 ## Strategy
 
-#### Business Goal
+### Business Goal:
 
 Become the biggest importer of natural wine in Sweden. Targeting the people loving wine but may not necessarily know so much about it. 
 
-#### Target Audience
+### Target Audience:
 
 - Age: 21-55
 - Informed as well as non-informed winelovers
@@ -30,11 +28,11 @@ Our target audience will be looking for a reliable source to find the best wine 
 - User account information that stores their data upon return in the future
 - Sign up to newsletters and links to external social media accounts
 
-#### Tone of Voice
+### Tone of Voice:
 
 We'll share informational and "educational" content in a witty, non pretentious way - not taking for granted that our community know it all.  
 
-#### Business Model
+### Business Model:
 
 B2C (Buiness to Customer) - A carefully selected e-commerce of imported natural wines to sell to winelovers over 21 years old in Sweden. Selection will mainly come from South Africa and Italy, seeing the gap in the market of South African low intervention wines, will especially make Supercazzola a name for itself. 
 B2B (Business to business) - A big part of Supercazzolas business model will be to distribute wine to bars and restaurants in the southern part of Sweden. Wine events, wine tastings and pop-up events will have our presence. 
@@ -42,29 +40,7 @@ B2B (Business to business) - A big part of Supercazzolas business model will be 
 Since we offer alcoholic beverage we will not have sales nor discounts on our products, but will rather make sure our community have fun at our accessable events and wine tastings, which will be shared by newsletter to those who sign up.
 
 
-### Marketing 
-
-**Mailchimp**
-Our community will be reached through Newsletters in which users can sign up to from the `footer` of the site with embedded Mailchimp. Mailchimp will store the email addresses and with time we will organise the users into groups depending on what they want from us: Will it be updates regarding new wines coming in, or eventseekers or those that are most interested in reading about wine an a witty informative way. We will shape email groups after their preference.
-
-**Instagram**
-Our target audience is mostily on Instagram and that is where we will meet them - adding posts ourselves and resharing posts from our community (if they fit our brand image) on a close to daily basis in order to rank high in our followers post stream. 
-
-**Facebook Business Page**
-In the footer users will find a link to our [Facebook Business page](https://www.facebook.com/supercazzolawine/) where we will marketing most of our wine events and be avaialble to chat to our customers if they have any questions.
-
-![Facebook Business](/misc/readme_images/facebook_business.png)
-
-![Facebook mobile](/misc/readme_images/facebook_mobile.png.png)
-
-**SEO**
-I started with a Google analysis and realised people frequently ask what natural wine is. Which I believe is a valid quiestion seeing it is relatively new on the market - So I wanted to include the question in a h2 header and a short answer to what it is in the homepage to increase SEO.
-In the Abous Us section there are also a lot of keywords included, such as: *Supercazzola* (our brand!), *wine, good wine, low intervention wine, Italy, South Africa, wineries, vineyard, wine making, local wine distributor, Southern Sweden*
-
-META --------
-
-
-### User Stories
+### User Stories:
 
 #### Epic: Login/Register
 
@@ -128,7 +104,7 @@ To achieve the user & business goals, the following features will be included in
 
 ## Structure
 
-### Data Models
+### Data Models:
 
 Following models have been created for this project:
 
@@ -145,15 +121,15 @@ Wishlist App:
 - Wishlist - Stores all users liked item
 - WishlistItem - Allowing users to add individual items to their wishlist
 
-### Database Schema
+### Database Schema:
 
 ![Database Schema](/misc/readme_images/database_schema.png)
 
 
 ## Skeleton
 
-## Wireframes
-The wiresframes differs slightly from the end result, but the main idea is still very much there. A consistent page layout on most pages for a no-surprising user experience with the focus on straight-to-the-point and product sales. 
+### Wireframes:
+The wireframes differs slightly from the end result, but the main idea is still very much there. A consistent page layout on most pages for a no-surprising user experience with the focus on straight-to-the-point and product sales. 
 Some content is hidden on smaller devices to ensure the mobilescreen gives the user the most important and relevant information. 
 
 ![Alert Box](/misc/readme_images/Alertbox.png)
@@ -171,24 +147,63 @@ Some content is hidden on smaller devices to ensure the mobilescreen gives the u
 ![Thanks for shopping](/misc/readme_images/Thanks_for_shopping.png)
 
 
-
 ## Surface
 
-### UX Design
+### UX Design:
 
 Use a clean layout and a proven e-commerce structure for a smooth navigation on the site. 
-Research amongst competitors show quite pale choice of colors and the few that caught my eye had a stronger visual approach and therefor decided to go with a strong shade of yellow (quite a characteristic color of natural wine capsules, which you sometime see made of rubber), also the color of the sun and without sun no wine. Black and white for simplicity and generated complimentary colors through [Colormind.io](http://colormind.io/) to set the contrasting colors for strong visual identity.
+Research amongst competitors show quite pale choice of colors and the few that caught my eye had a stronger visual approach and therefor decided to go with a strong shade of yellow (quite a characteristic color of natural wine capsules, which you sometime see made of rubber), also the color of the sun and without sun no wine. Black and white for simplicity and for a professional look. I generated complimentary colors through [Colormind.io](http://colormind.io/) to set the color scheme for strong visual identity.
 This also supports by our target audience being interested in art and design, looking for that different wine to stand out amongst their friends. 
 The age of target audience is proven to spend most of their time on the phone - therefor a fully responsive website on smaller devices is crucial. 
 
-### Font
+Colors:
+![Colormind Colors](/misc/readme_images/colormind_colors.png)
+
+
+### Font:
 
 I wanted to create an artsy look of the logo and first went for a grafitti style font. When doing research of font pairings I found the Google Font "Permanent Marker" matched with "Overpass Regular" on [Heyreliable.com](https://heyreliable.com/) and knew immediately that I wanted these two - one for an artsy "not giving a f"-look that suits the brand image and tone of voice, and one for a clean and neat read.
+Heyreliable also just happened to have a yellow color below:
+
+![Heyreliable fonts](/misc/readme_images/Heyreliable_fonts.png)
+
+Fonts: *Permanent Marker* paired with *Overpass Regular*
+![Fonts Permanent Marker and Overpass Regular](/misc/readme_images/fonts.png)
+
+Logo Font: *Londrina Solid*
+![Logo](/misc/readme_images/logo.png)
+
+
+### Features:
 
 
 
+### Marketing:
 
-Color: #DDC445
+**Mailchimp**
+Our community will be reached through Newsletters in which users can sign up to from the `footer` of the site with embedded Mailchimp. Mailchimp will store the email addresses and with time we will organise the users into groups depending on what they want from us: Will it be updates regarding new wines coming in, or eventseekers or those that are most interested in reading about wine an a witty informative way. We will shape email groups after their preference.
+
+![Mailchimp signup](/misc/readme_images/mailchimp.png)
+
+**Instagram**
+Our target audience is mostily on Instagram and that is where we will meet them - adding posts ourselves and resharing posts from our community (if they fit our brand image) on a close to daily basis in order to rank high in our followers post stream. 
+
+**Facebook Business Page**
+In the footer users will find a link to our [Facebook Business page](https://www.facebook.com/supercazzolawine/) where we will marketing most of our wine events and be avaialble to chat to our customers if they have any questions.
+
+![Facebook Business](/misc/readme_images/facebook_business.png)
+
+![Facebook mobile](/misc/readme_images/facebook_mobile.png.png)
+
+**SEO**
+I started with a Google analysis and realised people frequently ask what natural wine is. Which I believe is a valid quiestion seeing it is relatively new on the market - So I wanted to include the question in a h2 header and a short answer to what it is in the homepage to increase SEO.
+In the Abous Us section there are also a lot of keywords included, such as: *Supercazzola* (our brand!), *wine, good wine, low intervention wine, Italy, South Africa, wineries, vineyard, wine making, local wine distributor, Southern Sweden*
+
+On top of this I made google searches to see questions that people ask frequently and intergrated them in Meta Keywords, as well as other keywords that ranked high on google. Seeing the competition of natural wine distribution is not that high in Sweden I wanted to make sure that we include the most common keywords people search on, rather than niched ones.
+
+![SEO Meta keywords](/misc/readme_images/seo_meta.png)
+
+
 
 
 
@@ -220,7 +235,6 @@ I set up the project into 3 sprints:
 - Tweaks
 - Testing
 - Responsiveness 
-
 
 
 
