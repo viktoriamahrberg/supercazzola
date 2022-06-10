@@ -26,8 +26,17 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 
 - Age: 21-55
 - Informed as well as non-informed winelovers
+- Most likely to live in or close to cities 
 - Interests: Music, design/art, going out-ers (bars/restaurants), books and independent magazines
 - Persona: Curious, traveller, informed, openminded, likes spending money on the good stuff in life
+
+## Marketing 
+
+Our community will be reached through Newsletters in which users can sign up to from the footer of the site with Mailchimp. Mailchimp will store the email addresses and with time we will organise the users into groups depending on what they want from us: Will it be updates regarding new wines coming in, or eventseekers or those that are most interested in reading about wine an a witty informative way. We will shape email groups after their preference.
+ 
+Our target audience is mostily on Instagram and that is where we will meet them - adding posts and resharing posts from our community (if they fit our brand image) on a close to daily basis in order to rank high in our followers post stream. 
+
+
 
 
 # User Stories
@@ -87,22 +96,62 @@ The age of target audience is proven to spend most of their time on the phone - 
 
 ### Font
 
-I wanted to create an artsy look of the logo and first went for a grafitti style font. When doing research of font pairings I found the Google Font "Permanent Marker" matched with "Overpass Regular" on [Heyreliable.com](https://heyreliable.com/) and knew immediately that I wanted these two - one for an artsy "not giving a f"-look and one for a clean and neat read.
+I wanted to create an artsy look of the logo and first went for a grafitti style font. When doing research of font pairings I found the Google Font "Permanent Marker" matched with "Overpass Regular" on [Heyreliable.com](https://heyreliable.com/) and knew immediately that I wanted these two - one for an artsy "not giving a f"-look that suits the brand image and tone of voice, and one for a clean and neat read.
+
 
 
 
 Color: #DDC445
 
 ## Wireframes
+The wiresframes differs slightly from the end result, but the main idea is still very much there. A consistent page layout on most pages for a no-surprising user experience with the focus on straight-to-the-point and product sales. 
+Some content is hidden on smaller devices to ensure the mobilescreen gives the user the most important and relevant information. 
+
+![Alert Box](/misc/readme_images/Alertbox.png)
+
+![Home](/misc/readme_images/Home.png)
+
+![Shop](/misc/readme_images/Shop.png)
+
+![Product Detail](/misc/readme_images/Product_detail.png)
+
+![Bag](/misc/readme_images/Bag.png)
+
+![Checkout](/misc/readme_images/Checkout_pay.png)
+
+![Thanks for shopping](/misc/readme_images/Thanks_for_shopping.png)
+
+
 
 
 
 
 
 ## Planning / Agile Management
-I used the Github kanban board to create issues and user stories in the early development stages of this project and moved them across the board as I progressed. Link to [Github Project](https://github.com/viktoriamahrberg/supercazzola/projects/1)
-Userstories were oranised in "must-have", "could-have" or "should-have" labels in order to make prioritization of the scope easier. 
-I added userstories as I went on and realised what I want to add to the site in the future.
+I used the Github kanban board to create issues and user stories in the early development stages of this project and moved them across the board as I progressed from ToDo -> In Progress -> Done. Link to [Github Project](https://github.com/viktoriamahrberg/supercazzola/projects/1)
+Userstories were organised in "must-have", "could-have" or "should-have" labels in order to make prioritization of the scope easier. 
+I added userstories as I went on and realised what I want to add to the site in the future and have kept them in Backlog for further assessment after this project has been handed in.
+
+I set up the project into 3 sprints:
+
+*Sprint 1* (23-25th May):
+- Researching competitors
+- Planning
+- User Stories 
+- UX / designing the site
+- Set up wireframes
+- Database schema
+
+*Sprint 2* (25 May - 8th June):
+- Building the site
+
+*Sprint 3* (8 May - 13th June):
+- Readme.md
+- Tweaks
+- Testing
+- Responsiveness 
+
+
 
 
 ## Features to be implemented in future:
@@ -176,7 +225,7 @@ Wishlist App:
 
 ### Database Schema
 
-![Database Schema](/readme_images/database_schema.png)
+![Database Schema](/misc/readme_images/database_schema.png)
 
 # Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
@@ -194,7 +243,7 @@ Wishlist App:
 
 I run Lighthouse tool to check performance of the website. 
 
-![Lighthouse](/static/readme_images/lighthouse.png)
+![Lighthouse]
 
 
 
