@@ -1,14 +1,14 @@
+import json
+import time
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-
-from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 
-import json
-import time
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -19,15 +19,15 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
-    
     def _send_confirmation_email(self, order):
         """
-        Sending out order confirmation email 
+        Sending out order confirmation email
         when order has been successfully progressed
         """
         cust_email = order.email
         subject = render_to_string(
-            'checkout/checkout_confirmation_email/confirmation_email_subject.txt',
+            'checkout/checkout_confirmation_email/ \
+            confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
             'checkout/checkout_confirmation_email/confirmation_email.txt',
@@ -106,7 +106,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | \
+                SUCCESS: Verified order already in database',
                 status=200)
         # If order doesn't exist it will be created
         else:
@@ -142,7 +143,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | \
+            SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_failed(self, event):

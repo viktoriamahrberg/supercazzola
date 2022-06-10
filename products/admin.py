@@ -3,6 +3,9 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Product details to display in admin panel
+    """
     list_display = (
         'name',
         'country',
@@ -16,6 +19,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Category details to desplay in admin panel
+    """
     list_display = (
         'friendly_name',
         'name',

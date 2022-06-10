@@ -42,13 +42,6 @@ select option {
   color: #292F30;
 }
 
-/* select:focus, 
-select:active, 
-select option:focus,
-select option:active  {
-  box-shadow: none;
-} */
-
 select:invalid,
 select option[value=''] {
   color: #292F30 !important;
@@ -57,35 +50,34 @@ select option[value=''] {
 #loading-overlay {
 	display: none;
 	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(41,	47,	48, .50);
-
-    z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41,	47,	48, .50);
+  z-index: 9999;
 }
 
 .loading-spinner {
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
 }
 
 .fieldset-label {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 #payment-form .form-control,
 #cart-element {
-    border: 1px solid !important; 
-    border-radius: 0;
+  border: 1px solid !important; 
+  border-radius: 0;
 }
 
 .form-control:focus,
 .stripe-style-input,
 #card-element {  
-    color: #000 !important;   
+  color: #000 !important;   
 }

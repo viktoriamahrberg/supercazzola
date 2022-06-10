@@ -6,4 +6,7 @@ class CheckoutConfig(AppConfig):
     name = 'checkout'
 
     def ready(self):
+        """
+        Override ready method
+        """
         import checkout.signals

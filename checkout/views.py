@@ -1,17 +1,21 @@
+import json
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
-from django.contrib import messages 
+from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+import stripe
+
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from products.models import Product
 
-import stripe
-import json
+from .forms import OrderForm
+from .models import Order, OrderLineItem
+
+
 
 
 @require_POST
@@ -72,23 +76,27 @@ def checkout(request):
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database."
+                        "One of the products in your bag wasn't found \
+                        in our database."
                         "Please drop us an email.")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, f'There is nothing in your cart at the moment')
+            messages.error(request, (
+                'There is nothing in your cart at the moment'
+            ))
             return redirect(reverse('products'))
-            
+
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
@@ -113,7 +121,7 @@ def checkout(request):
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
-        else:       
+        else:
             order_form = OrderForm()
 
     if not stripe_public_key:
@@ -156,11 +164,11 @@ def checkout_success(request, order_number):
         if user_profile_form.is_valid():
             user_profile_form.save()
 
-    messages.success(request, f'Order successfully completed!')
+    messages.success(request, 'Order successfully completed!')
 
     if 'bag' in request.session:
         del request.session['bag']
-    
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,

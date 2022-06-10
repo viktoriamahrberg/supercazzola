@@ -21,8 +21,10 @@ class WishlistItem(models.Model):
     A 'through' model, allowing users to add
     individual products to their wishlist.
     """
-    product = models.ForeignKey(Product, null=True, blank=False, on_delete=models.CASCADE)
-    wishlist = models.ForeignKey(Wishlist, null=True, blank=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=True, blank=False,
+                                on_delete=models.CASCADE)
+    wishlist = models.ForeignKey(Wishlist, null=True, blank=False,
+                                 on_delete=models.CASCADE)
 
     def __str__(self):
         return self.product.name
