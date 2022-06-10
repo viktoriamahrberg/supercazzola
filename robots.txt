@@ -5,3 +5,4 @@ Disallow: /checkout/
 Disallow: /checkout/checkout_success/
 Disallow: /add_product/
 Disallow: /edit_product/
+sitemap: https://superzazzola.herokuapp.com/sitemap.xml
