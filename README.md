@@ -133,24 +133,31 @@ The wireframes differs slightly from the end result, but the main idea is still 
 Some content is hidden on smaller devices to ensure the mobilescreen gives the user the most important and relevant information. 
 
 **Alert Box:**
+
 ![Alert Box](/misc/readme_images/Alertbox.png)
 
 **Home:**
+
 ![Home](/misc/readme_images/Home.png)
 
 **Shop:**
+
 ![Shop](/misc/readme_images/Shop.png)
 
 **Product Detail:**
+
 ![Product Detail](/misc/readme_images/Product_detail.png)
 
 **Cart:**
+
 ![Cart](/misc/readme_images/Bag.png)
 
-**Cehckout:**
+**Checkout:**
+
 ![Checkout](/misc/readme_images/Checkout_pay.png)
 
 **Thanks for shopping:**
+
 ![Thanks for shopping](/misc/readme_images/Thanks_for_shopping.png)
 
 
@@ -158,12 +165,12 @@ Some content is hidden on smaller devices to ensure the mobilescreen gives the u
 
 ### UX Design:
 
-Use a clean layout and a proven e-commerce structure for a smooth navigation on the site. 
+A clean layout and a proven e-commerce structure for a smooth navigation on the site. 
 Research amongst competitors show quite pale choice of colors and the few that caught my eye had a stronger visual approach and therefor decided to go with a strong shade of yellow (quite a characteristic color of natural wine capsules, which you sometime see made of rubber), also the color of the sun and without sun no wine. Black and white for simplicity and for a professional look. I generated complimentary colors through [Colormind.io](http://colormind.io/) to set the color scheme for strong visual identity.
 This also supports by our target audience being interested in art and design, looking for that different wine to stand out amongst their friends. 
 The age of target audience is proven to spend most of their time on the phone - therefor a fully responsive website on smaller devices is crucial. 
 
-Colors:
+### Colors:
 ![Colormind Colors](/misc/readme_images/colormind_colors.png)
 
 
@@ -171,6 +178,8 @@ Colors:
 
 I wanted to create an artsy look of the logo and first went for a grafitti style font. When doing research of font pairings I found the Google Font "Permanent Marker" matched with "Overpass Regular" on [Heyreliable.com](https://heyreliable.com/) and knew immediately that I wanted these two - one for an artsy "not giving a f"-look that suits the brand image and tone of voice, and one for a clean and neat read.
 Heyreliable also just happened to have a yellow color below:
+
+Heyreliable font pairing:
 
 ![Heyreliable fonts](/misc/readme_images/Heyreliable_fonts.png)
 
@@ -182,6 +191,113 @@ Logo Font: *Londrina Solid*
 
 
 ### Features:
+
+**Navbar** 
+A fixed navbar that remains at the top of the screen throughout the site, allowing the user to easily navigate through the website. On smaller devicese the *Shop* and *Home* collapsese down to a burger. Includes:
+- Logo: Linked to home page
+- Search bar
+- User Account: Login/Register
+- Logged in user will also see the heart symbol that takes the user to the wishlist page and can also navigate to My Profile in the navbar. 
+
+![Navbar](/misc/readme_images/navbar.png)
+
+Mobile Navbar:
+
+¡[Navbar mobile](/misc/readme_images/navbar_mobile.png)
+
+**Home**
+
+The home page consists of most relevant call-to-action buttons as well as information for a smooth UX so the user doesn't have to navigate around the site to find what he/she is looking for:
+- A short tagline
+- Shop Now-button
+- Contact-form for bar/restaurant owners
+- About us section
+- What is Natural wine - section
+
+The page is structured in two columns which on mobile version stacks as one column and some photos are removed so the scrolling doesn't have to be too long.
+
+**Footer** 
+
+I used Bootstrap for a fixed footer that stacks the columns when on smaller screens. Footer is showing on all pages and links to Social Media and provides a newsletter signup form from Mailchimp
+
+![Footer](/misc/readme_images/footer.png)
+
+Mobile Footer:
+
+¡[Footerbar mobile](/misc/readme_images/footer_mobile.png)
+
+
+**Shop** 
+
+A grid of three to display all products available as well as a Sort-By tab. The Sort-By tab can organise products by Price(Low to High), Price(High to Low) or By Color. 
+Products displays an image (default image will be set if none is provided), product title, wine origin (Country), alcoholic ratio, category (color of wine) and price. When clicking on the product user is being linked to the Product Details page.
+
+¡[Shop_all Page](/misc/readme_images/shop_page.png)
+
+Mobile Footer:
+
+¡[Shop mobile](/misc/readme_images/shop_all_mobile.png)
+
+
+**Product Details page** 
+Further information about the individual product is visible here with same details as the Shop page as well as Description. 
+User can also increment or decrement quantity they wish to purchase and click on Add To Cart-button. 
+When adding to cart a pop-up message is shown that the product was sucessfully added with a summary of the cart so far.
+
+¡[Product details page](/misc/readme_images/product_details_page.png)
+
+Pop-up message:
+
+¡[Message cart](/misc/readme_images/messages_cart.png)
+
+
+**Cart/Checkout**
+
+The Cart provides a summary of the chosen products in a table, including product, price, quantity and subtotal. 
+In each product row the user can adjust quantity to press the X to remove the item completely from the cart. The psuptotal and total is beeing adjusted accordingy when pressing the Update Cart button. 
+At the bottom the button to Checkout is provided. Or a Keep Shopping link that takes the user back to the shop page. 
+If nothing exists in the cart the page will show "Your Cart is Empty" with a link to Keep Shopping.
+
+The checkout page is the final step where the users completes the order. Split in two columns the first one allows the user to enter shipping information and full_name and email in a form. If the user is logged in default shipping details is prepopulated and the user also has an option to save the shipping information for future. 
+The second column is a summary of the cart.
+
+The payment has been set up using [Stripe](https://stripe.com/en-gb-se) and is for this deployment in test mode. A purchase can be tested by entering the following Stripe card details:
+4242 4242 4242 4242, any future date for expire date and any five digits for post code. 
+
+
+¡[Shopping cart](/misc/readme_images/shopping_cart.png)
+
+¡[Checkout page](/misc/readme_images/checkout_page.png)
+
+¡[Payment section](/misc/readme_images/payment_section.png)
+
+
+**Successful Checkout**
+
+If a successful order was proceeded the user will be taken to a checkout_success page where a summary of the order is provided. An email with the order details will also be sent out. 
+
+**Sign Up/User Profile/Wishlist**
+
+When a user has registered an account and logged in the user can view past orders and shipping information as well as like products that will be added to a wishlist.
+Each product has a heart on the shop page, and when clicking on it it is beeng added to the wishlist or promptin the user to login/signup in order to do so. Products can be removed from the wishlist, by clicking on the heart. 
+
+¡[Sign Up](/misc/readme_images/signup.png)
+
+¡[My Account](/misc/readme_images/my_account.png)
+
+¡[Wishlist](/misc/readme_images/wishlist.png)
+
+
+**ADMIN: Product Management**
+
+A superuser (an admin of the store) can add products when clicking on Product Management in the Account-navbar. Products can also be edited or deleted when clicking on the links to the specific product they want to be changed.
+After adding a product or editing a product the user is being redirected to that new Product Detail page. 
+
+¡[Admin Edet/Delete product](/misc/readme_images/admin_edit_delete.png)
+
+¡[Admin Edit product](/misc/readme_images/admin_edit_product1.png)
+
+¡[Admin Edit product](/misc/readme_images/admin_edit_product.png)
 
 
 
@@ -209,6 +325,9 @@ In the Abous Us section there are also a lot of keywords included, such as: *Sup
 On top of this I made google searches to see questions that people ask frequently and intergrated them in Meta Keywords, as well as other keywords that ranked high on google. Seeing the competition of natural wine distribution is not that high in Sweden I wanted to make sure that we include the most common keywords people search on, rather than niched ones.
 
 ![SEO Meta keywords](/misc/readme_images/seo_meta.png)
+
+
+
 
 
 ## Planning / Agile Management
