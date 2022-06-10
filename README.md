@@ -7,13 +7,13 @@ Because we assure you - you will come back for more.
 
 # UX 
 
-## Strategy
+# Strategy
 
-### Business Goal:
+## Business Goal:
 
 Become the biggest importer of natural wine in Sweden. Targeting the people loving wine but may not necessarily know so much about it. 
 
-### Target Audience:
+## Target Audience:
 
 - Age: 21-55
 - Informed as well as non-informed winelovers
@@ -28,11 +28,11 @@ Our target audience will be looking for a reliable source to find the best wine 
 - User account information that stores their data upon return in the future
 - Sign up to newsletters and links to external social media accounts
 
-### Tone of Voice:
+## Tone of Voice:
 
 We'll share informational and "educational" content in a witty, non pretentious way - not taking for granted that our community know it all.  
 
-### Business Model:
+## Business Model:
 
 B2C (Buiness to Customer) - A carefully selected e-commerce of imported natural wines to sell to winelovers over 21 years old in Sweden. Selection will mainly come from South Africa and Italy, seeing the gap in the market of South African low intervention wines, will especially make Supercazzola a name for itself. 
 B2B (Business to business) - A big part of Supercazzolas business model will be to distribute wine to bars and restaurants in the southern part of Sweden. Wine events, wine tastings and pop-up events will have our presence. 
@@ -40,9 +40,9 @@ B2B (Business to business) - A big part of Supercazzolas business model will be 
 Since we offer alcoholic beverage we will not have sales nor discounts on our products, but will rather make sure our community have fun at our accessable events and wine tastings, which will be shared by newsletter to those who sign up.
 
 
-### User Stories:
+## User Stories:
 
-#### Epic: Login/Register
+### Epic: Login/Register
 
 1. As a user I want to register an account so that I can store delivery information for quick and easy checkout
 2. As a returning user I want to login to my account so that I can manage my account
@@ -51,7 +51,7 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 4. As a returning user I want to logout from my account so that I know it is secure
 
 
-#### Epic: Shop/Products
+### Epic: Shop/Products
 
 5. As a store owner I want to add products to site so that I can increase sales
 6. As a store owner I want to edit products on site so that I can update products
@@ -64,7 +64,7 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 13. As a user I want to add products to a shopping bag so that I can browse around before I checkout
 14. As a user I want to add quantity from product page so that I easily can buy more than one 
 
-#### Epic: Payment/Checkout
+### Epic: Payment/Checkout
 
 15. As a user I want to see a summary of my bag so that I know what I am eventually paying for
 16. As a user I want to see the shipping fee so that I know the total price
@@ -75,7 +75,7 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 21. As a returning user I want to store my shipping information so that I quickly can checkout next time
 22. As a store owner I want to see an order summary of confirmed purchase so that I can proceed with delivery of products
 
-#### Epic: Site
+### Epic: Site
 
 23. As a user I want to read about the company when I land on the page so I can find out about what they do and who they are
 24. As a user I want to sign up for emails so that I can stay up to date with events/wine tastings and other news
@@ -85,11 +85,11 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 28. As a user I want to be emailed an order confirmation so that I can keep it as a reciept of successful order
 29. As a bar/restaurant owner I want see contact information so that I can potentially buy your wine for my business
 
-#### Epic: Marketing
+### Epic: Marketing
 
 -------
 
-## Scope
+# Scope
 
 To achieve the user and business goals, the following features will be included in this project:
 
@@ -102,9 +102,9 @@ To achieve the user and business goals, the following features will be included 
 - Footer with links to social media accounts as well as a newsletter signup
 
 
-## Structure
+# Structure
 
-### Data Models:
+## Data Models:
 
 Following models have been created for this project:
 
@@ -121,14 +121,14 @@ Following models have been created for this project:
     - Wishlist - Stores all users liked item
     - WishlistItem - Allowing users to add individual items to their wishlist
 
-### Database Schema:
+## Database Schema:
 
 ![Database Schema](/misc/readme_images/database_schema.png)
 
 
-## Skeleton
+# Skeleton
 
-### Wireframes:
+## Wireframes:
 The wireframes differs slightly from the end result, but the main idea is still very much there. A consistent page layout on most pages for a no-surprising user experience with the focus on straight-to-the-point and product sales. 
 Some content is hidden on smaller devices to ensure the mobilescreen gives the user the most important and relevant information. 
 
@@ -161,9 +161,9 @@ Some content is hidden on smaller devices to ensure the mobilescreen gives the u
 ![Thanks for shopping](/misc/readme_images/Thanks_for_shopping.png)
 
 
-## Surface
+# Surface
 
-### UX Design:
+## UX Design:
 
 A clean layout and a proven e-commerce structure for a smooth navigation on the site. 
 Research amongst competitors show quite pale choice of colors and the few that caught my eye had a stronger visual approach and therefor decided to go with a strong shade of yellow (quite a characteristic color of natural wine capsules, which you sometime see made of rubber), also the color of the sun and without sun no wine. Black and white for simplicity and for a professional look. I generated complimentary colors through [Colormind.io](http://colormind.io/) to set the color scheme for strong visual identity.
@@ -190,7 +190,7 @@ Logo Font: *Londrina Solid*
 ![Logo](/misc/readme_images/logo.png)
 
 
-### Features:
+## Features:
 
 **Navbar** 
 A fixed navbar that remains at the top of the screen throughout the site, allowing the user to easily navigate through the website. On smaller devicese the *Shop* and *Home* collapsese down to a burger. Includes:
@@ -300,8 +300,7 @@ After adding a product or editing a product the user is being redirected to that
 ¡[Admin Edit product](/misc/readme_images/admin_edit_product.png)
 
 
-
-### Marketing:
+## Marketing:
 
 **Mailchimp**
 Our community will be reached through Newsletters in which users can sign up to from the `footer` of the site with embedded Mailchimp. Mailchimp will store the email addresses and with time we will organise the users into groups depending on what they want from us: Will it be updates regarding new wines coming in, or eventseekers or those that are most interested in reading about wine an a witty informative way. We will shape email groups after their preference.
@@ -328,9 +327,7 @@ On top of this I made google searches to see questions that people ask frequentl
 
 
 
-
-
-## Planning / Agile Management
+# Planning / Agile Management
 I used the Github kanban board to create issues and user stories in the early development stages of this project and moved them across the board as I progressed from TODO -> In Progress -> Done. 
 Link to [Github Project here](https://github.com/viktoriamahrberg/supercazzola/projects/1)
 Userstories were organised in "must-have", "could-have" or "should-have" labels in order to make prioritization of the scope easier. 
@@ -355,13 +352,11 @@ I set up the project into 3 sprints:
 - Testing
 - Responsiveness 
 
-
-## Features to be implemented in future:
+## Backlog: Features to be implemented in future:
 
 - The legal age to buy alcohol is above 21 so a feature to implement in the future would be to link Bank ID for users to log in and confirm their age.
 
 - Klarna for seamless checkout, as well as remove test mode for Stripe
-
 
 
 # Technology used
@@ -407,12 +402,6 @@ I set up the project into 3 sprints:
 - **TinyPNG** (Compress image file)
 
 
-## Database
-- SQLite was used in delevopment to store data
-- PostgreSQL was used in production to store data
-
-
-
 # Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
 
@@ -422,14 +411,14 @@ I set up the project into 3 sprints:
 
 [PEP8 Validator](http://pep8online.com/) to test all Python files
 
-## Manual Testing
-
 
 ## Performance testing
 
 I run Lighthouse tool to check performance of the website. 
 
 ![Lighthouse]
+
+## Manual Testing
 
 
 ## Bugs during development:
