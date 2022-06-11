@@ -103,6 +103,35 @@
     - Store owners can see all placed order in the Admin panel. It shows the products sold, total price, shipping price and full customer details including shipping details.
 
     ![Admin Order history](/misc/readme_images/admin_order_history.png)
-    
+
     ![Admin Order history](/misc/readme_images/admin_order_product_history.png)
 
+### Epic: Site
+
+- As a user I want to read about the company when I land on the page so I can find out about what they do and who they are
+    - About Us section is on the home page
+
+    ![About us](/misc/readme_images/fonts.png)
+
+- As a user I want to sign up for emails so that I can stay up to date with events/wine tastings and other news
+- As a user I want to see Social Media links so that I easily can follow and be part of their community
+    - In the footer users can sign up to Supercazzolas newsletter that has been embedded by Mailchimp and which will store all signed up emails. Also Social Media links can be found here, Facebook links to Supercazzolas Facebook Business page.
+
+    ![Footer Mailchimp and Social Media links](/misc/readme_images/footer.png)
+
+- As a user I want to see a navigation menu so that I can easily navigate on the site
+    - The navbar consists of Shop - My Account and My Wishilist. On mobile version there is a burger menu with a dropdown to Home and Shop. 
+
+    ![Mobile navbar](/misc/readme_images/navbar_mobile.png)
+
+
+- As a user I want to be notified by messages when on the site so I know about alerts/errors/success
+    - Djangos built in messages module is popping up with errors-, warnings-, success- and alert-messages in top right corner rthroughout the site. The message box can be closed down by the user manually. 
+
+    ![Successmessage](/misc/readme_images/message_box.png)
+
+
+- As a bar/restaurant owner I want see contact information so that I can potentially buy your wine for my business
+    - A link to contact form can be found on the homepage which takes the user to a new page with a contact form.
+
+    ![Contact form](/misc/readme_images/contactform.png)

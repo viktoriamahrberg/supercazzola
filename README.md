@@ -85,8 +85,6 @@ Since we offer alcoholic beverage we will not have sales nor discounts on our pr
 28. As a user I want to be emailed an order confirmation so that I can keep it as a reciept of successful order
 29. As a bar/restaurant owner I want see contact information so that I can potentially buy your wine for my business
 
-### Epic: Marketing
-
 -------
 
 # Scope
