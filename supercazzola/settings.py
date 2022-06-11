@@ -222,7 +222,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'hello@supercazzola.com'
+    DEFAULT_FROM_EMAIL = 'supercazzola@example.com'
 
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

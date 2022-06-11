@@ -18,7 +18,7 @@ def contact(request):
             message = form.cleaned_data['message']
             try:
                 send_mail(
-                    subject, message, from_email, ['hello@supercazzola.com']
+                    subject, message, from_email, ['supercazzola@example.com']
                     )
             except BadHeaderError:
                 messages.error(request, (
