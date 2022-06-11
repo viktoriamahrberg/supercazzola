@@ -75,7 +75,9 @@ class StripeWH_Handler:
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_street_address = shipping_details.address.line1
-                profile.default_optional_address = shipping_details.address.line2
+                profile.default_optional_address = (
+                    shipping_details.address.line2
+                )
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_city = shipping_details.address.city
                 profile.save()

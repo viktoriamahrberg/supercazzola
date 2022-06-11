@@ -413,7 +413,19 @@ _Sprint 3 (8 May - 13th June):_
 
 [JSHint](https://jshint.com/) to test Javascript
 
-[PEP8 Validator](http://pep8online.com/) to test all Python files
+[PEP8 Validator](http://pep8online.com/) to test all Python files.
+    All files in the following apps have have been tested manually in Pep8 and shown code is all right:
+     - Bag
+     - Checkout
+     - Contact 
+     - Home
+     - Products
+     - Profiles
+     - Supercazzola
+     - Wishlist
+    
+    ![Pep8 Validator](/misc/readme_images/pep8.png)
+
 
 
 ## Performance testing
@@ -423,6 +435,10 @@ I run Lighthouse tool to check performance of the website.
 ![Lighthouse]
 
 ## Manual Testing
+
+[Link to manual User Story testing](/manual_testing.md)
+
+
 
 
 ## Bugs during development:
