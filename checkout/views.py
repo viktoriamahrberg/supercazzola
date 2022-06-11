@@ -112,12 +112,12 @@ def checkout(request):
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
-                    'default_phone_number': profile.default_phone_number,
-                    'default_street_address': profile.default_street_address,
-                    'default_optional_address': profile.default_optional_address,
-                    'default_city': profile.default_city,
-                    'default_country': profile.default_country,
-                    'default_postcode': profile.default_postcode,
+                    'phone_number': profile.default_phone_number,
+                    'street_address': profile.default_street_address,
+                    'optional_address': profile.default_optional_address,
+                    'city': profile.default_city,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
                 })
             except UserProfile.DoesNotExist:
                 order_form = OrderForm()
