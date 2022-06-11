@@ -444,17 +444,23 @@ My app was built from the [Code Institute Gitpod Full Template](https://github.c
 ### Deploy to Heroku
 1. Create a new account or login to your Heroku account
 2. Create a New Heroku app
-3. Name it and choose a region closest to you
+3. Give the app a unique name choose a region closest to you
 4. Click Resources and add 'Heroku Postgres' in Add-ons section
 5. To use the Postgres database it needs to be installed in Gitpod: Type `pip3 install dj_database_url` in the terminal and `pip3 install psycopg2-binary`
 6. Freeze these requirements with `pip3 freeze > requirements.txt`
 7. Set up new database in settings.py: import dj_database_url
 8. In Gitpod you also need to create a Procfile to tell Heroku to create a web dyno which will run gunicorn and serve our django app
+9. Go to Deploy section tab in Heroku and scroll down to Deployment Method. I connected to my Github pages and could thereafter linked to the Github repo.
+10. Choose the branch you want to buid your app from
+11. Manual deployment from Gitpod to Heroku is made with command: `git push heroku main` in CLI.
+12. After finishing working on the site: DEBUG = False was changed in settings.py.
 
+### AWS S3
 
-AWS amazon S3 bucket to load statics
+AWS Amazon S3 bucket was used to load and store statics.
+I have created a Bucket, User Group and User that can access this site and the relevant files. In order for the files to be correctly served I have added the following settings in settings.py file:
 
-
+![AWS S3 Bucket](/misc/readme_images/aws_s3_bucket.png)
 
 ## Local Deployment
 
@@ -480,6 +486,10 @@ Cloning can also be a great way to back up your work:
 
 
 # Credits
+
+- **Code:** The core functionality of Supercazzola is coming from the Code Institute's walkthrough project - [Boutique Ado Project](https://boutique-ado-vikmah.herokuapp.com/).
+Thank you Code Institute - it's been a real hero for my understanding of Django.
+
 
 - [Colormind.io](http://colormind.io/) - Color palette picker 
 
