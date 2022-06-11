@@ -487,7 +487,7 @@ Cloning can also be a great way to back up your work:
 
 # Credits
 
-- **Code:** The core functionality of Supercazzola is coming from the Code Institute's walkthrough project - [Boutique Ado Project](https://boutique-ado-vikmah.herokuapp.com/).
+- **Code:** The core functionality of Supercazzola is coming from the [Code Institute's](https://codeinstitute.net/) walkthrough project - [Boutique Ado Project](https://boutique-ado-vikmah.herokuapp.com/).
 Thank you Code Institute - it's been a real hero for my understanding of Django.
 
 
