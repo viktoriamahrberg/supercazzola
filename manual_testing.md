@@ -1,14 +1,52 @@
-# Manual Testing
+# Manual Testing Functionality
 
-| Test | Expected Output | Passed
-| ----------- | ----------- | ---- |
-|  User loads the home page | All content loads without error both as logged in or logged out, navigation bar and content is fully responsive| [x]
+[Back to README.md](/README.md)
+
+NAVBAR
+| Element | Action | Expected Output | Pass/Fail |
+| ----------- | ---- | ----------- | ---- |
+|  **NAVBAR** |  |  |
+|  Logo | Click | Redirects to Home | Pass
+|  Searchbar | Input | Loads the page with products or display "No products found" | Pass
+|  Searchbar | No Input | Message pops up that nothing was searched for | Pass
+|  Shop | Click | Dropdown menu with products to shop by color or All Products | Pass
+|  Profile icon | Click | As logged in user: Dropdown with 'My Profile' and 'Log Out' | Pass
+|  Profile icon | Click | As logged in superuser: Dropdown with 'Manage Products', 'My Profile' and 'Log Out' | Pass
+|  Profile icon | Click | As first visitor user: Dropdown with 'Register' and 'Log in' | Pass
+|  **MOBILE NAVBAR** |  |  |
+|  Burger menu | Click | Open Dropdown | Pass
+|  -Home | Click | Return to Home page | Pass
+|  -Shop | Click | Redirects to Shop All Products page | Pass
+|  Search icon | Click | Displays search field | Pass
+|  Searchbar | Input | Loads the page with products or display "No products found" | Pass
+|  Searchbar | No Input | Message pops up that nothing was searched for | Pass
+|  Profile icon | Click | As logged in user: Dropdown with 'My Profile', 'My Wishlist' and 'Log out' | Pass
+|  Profile icon | Click | As logged in superuser: Dropdown with 'Manage Products', 'My Profile', 'My Wishlist' and 'Log Out' | Pass
+|  Profile icon | Click | As first visitor user: Dropdown with 'Register' and 'Log in' | Pass
+|  -Register | Click | Redirects to Sign Up page | Pass
+|  -Login | Click | Redirects to Login page | Pass
+|  -Logout | Click | Redirects to Sign Out | Pass
+|  -My Wishlist| Click | Redirects to My Wishlist page | Pass
+|  -Product Management | Click | Redirects to Product Management page | Pass
+|  Cart/ €0.00 | Click | Redirect to Cart page | Pass
+|  **HOME PAGE** |  |  |
+|  Shop Now-button | Click | Redirect to Product page | Pass
+|  Contact Us Here-button | Click | Redirect to Contact page | Pass
+|  **FOOTER** |  |  |
+|  -Social Media icons | Click | Redirects to Supercazzola Facebook Business page, Twitter homepage and Instagram homepage | Pass
+|  Signup Mailchimp | Input | Redirects to 'Mailchimp-Thank you for signing up page' | Pass
+|  Signup Mailchimp | Wrong Input | Redirects to 'Mailchimp-Error page and asks user to fill out correct details again' | Pass
+
+
+
+
+
+
+
+
+
+
 | User loads the home page as signed in | Only Logout and Create Post links show in nav bar and all content loads and work as expected |  [x]
-
-
-
-
-
 
 # User Stories Testing
 
