@@ -203,7 +203,7 @@ A fixed navbar that remains at the top of the screen throughout the site, allowi
 
 Mobile Navbar:
 
-¡[Navbar mobile](/misc/readme_images/navbar_mobile.png)
+![Navbar mobile](/misc/readme_images/navbar_mobile.png)
 
 **Home**
 
@@ -224,7 +224,7 @@ I used Bootstrap for a fixed footer that stacks the columns when on smaller scre
 
 Mobile Footer:
 
-¡[Footerbar mobile](/misc/readme_images/footer_mobile.png)
+![Footerbar mobile](/misc/readme_images/footer_mobile.png)
 
 
 **Shop** 
@@ -232,11 +232,11 @@ Mobile Footer:
 A grid of three to display all products available as well as a Sort-By tab. The Sort-By tab can organise products by Price(Low to High), Price(High to Low) or By Color. 
 Products displays an image (default image will be set if none is provided), product title, wine origin (Country), alcoholic ratio, category (color of wine) and price. When clicking on the product user is being linked to the Product Details page.
 
-¡[Shop_all Page](/misc/readme_images/shop_page.png)
+![Shop_all Page](/misc/readme_images/shop_page.png)
 
 Mobile Footer:
 
-¡[Shop mobile](/misc/readme_images/shop_all_mobile.png)
+![Shop mobile](/misc/readme_images/shop_all_mobile.png)
 
 
 **Product Details page** 
@@ -244,11 +244,11 @@ Further information about the individual product is visible here with same detai
 User can also increment or decrement quantity they wish to purchase and click on Add To Cart-button. 
 When adding to cart a pop-up message is shown that the product was sucessfully added with a summary of the cart so far.
 
-¡[Product details page](/misc/readme_images/product_details_page.png)
+![Product details page](/misc/readme_images/product_details_page.png)
 
 Pop-up message:
 
-¡[Message cart](/misc/readme_images/messages_cart.png)
+![Message cart](/misc/readme_images/messages_cart.png)
 
 
 **Cart/Checkout**
@@ -265,11 +265,11 @@ The payment has been set up using [Stripe](https://stripe.com/en-gb-se) and is f
 4242 4242 4242 4242, any future date for expire date and any five digits for post code. 
 
 
-¡[Shopping cart](/misc/readme_images/shopping_cart.png)
+![Shopping cart](/misc/readme_images/shopping_cart.png)
 
-¡[Checkout page](/misc/readme_images/checkout_page.png)
+![Checkout page](/misc/readme_images/checkout_page.png)
 
-¡[Payment section](/misc/readme_images/payment_section.png)
+![Payment section](/misc/readme_images/payment_section.png)
 
 
 **Successful Checkout**
@@ -281,11 +281,11 @@ If a successful order was proceeded the user will be taken to a checkout_success
 When a user has registered an account and logged in the user can view past orders and shipping information as well as like products that will be added to a wishlist.
 Each product has a heart on the shop page, and when clicking on it it is beeng added to the wishlist or promptin the user to login/signup in order to do so. Products can be removed from the wishlist, by clicking on the heart. 
 
-¡[Sign Up](/misc/readme_images/signup.png)
+![Sign Up](/misc/readme_images/signup.png)
 
-¡[My Account](/misc/readme_images/my_account.png)
+![My Account](/misc/readme_images/my_account.png)
 
-¡[Wishlist](/misc/readme_images/wishlist.png)
+![Wishlist](/misc/readme_images/wishlist.png)
 
 
 **ADMIN: Product Management**
@@ -293,31 +293,36 @@ Each product has a heart on the shop page, and when clicking on it it is beeng a
 A superuser (an admin of the store) can add products when clicking on Product Management in the Account-navbar. Products can also be edited or deleted when clicking on the links to the specific product they want to be changed.
 After adding a product or editing a product the user is being redirected to that new Product Detail page. 
 
-¡[Admin Edet/Delete product](/misc/readme_images/admin_edit_delete.png)
+![Admin Edet/Delete product](/misc/readme_images/admin_edit_delete.png)
 
-¡[Admin Edit product](/misc/readme_images/admin_edit_product1.png)
+![Admin Edit product](/misc/readme_images/admin_edit_product1.png)
 
-¡[Admin Edit product](/misc/readme_images/admin_edit_product.png)
+![Admin Edit product](/misc/readme_images/admin_edit_product.png)
 
 
 ## Marketing:
 
 **Mailchimp**
+
 Our community will be reached through Newsletters in which users can sign up to from the `footer` of the site with embedded Mailchimp. Mailchimp will store the email addresses and with time we will organise the users into groups depending on what they want from us: Will it be updates regarding new wines coming in, or eventseekers or those that are most interested in reading about wine an a witty informative way. We will shape email groups after their preference.
 
 ![Mailchimp signup](/misc/readme_images/mailchimp.png)
 
 **Instagram**
+
 Our target audience is mostily on Instagram and that is where we will meet them - adding posts ourselves and resharing posts from our community (if they fit our brand image) on a close to daily basis in order to rank high in our followers post stream. 
 
 **Facebook Business Page**
+
 In the footer users will find a link to our [Facebook Business page](https://www.facebook.com/supercazzolawine/) where we will marketing most of our wine events and be avaialble to chat to our customers if they have any questions.
 
-![Facebook Business](/misc/readme_images/facebook_business.png)
+![Facebook Business](/misc/readme_images/facebook_business1.png)
+![Facebook Business](/misc/readme_images/facebook_business2.png)
 
-![Facebook mobile](/misc/readme_images/facebook_mobile.png.png)
+![Facebook mobile](/misc/readme_images/facebook_mobile.png)
 
 **SEO**
+
 I started with a Google analysis and realised people frequently ask what natural wine is. Which I believe is a valid quiestion seeing it is relatively new on the market - So I wanted to include the question in a h2 header and a short answer to what it is in the homepage to increase SEO.
 In the Abous Us section there are also a lot of keywords included, such as: *Supercazzola* (our brand!), *wine, good wine, low intervention wine, Italy, South Africa, wineries, vineyard, wine making, local wine distributor, Southern Sweden*
 
@@ -335,7 +340,7 @@ I added userstories as I went on and realised what I want to add to the site in 
 
 I set up the project into 3 sprints:
 
-*Sprint 1* (23-25th May):
+_Sprint 1 (23-25th May):_
 - Researching competitors
 - Planning
 - User Stories 
@@ -343,16 +348,16 @@ I set up the project into 3 sprints:
 - Set up wireframes
 - Database schema
 
-*Sprint 2* (25 May - 8th June):
+_Sprint 2 (25 May - 8th June):_
 - Building the site
 
-*Sprint 3* (8 May - 13th June):
+_Sprint 3 (8 May - 13th June):_
 - Readme.md
 - Tweaks
 - Testing
 - Responsiveness 
 
-## Backlog: Features to be implemented in future:
+### Backlog: Features to be implemented in future:
 
 - The legal age to buy alcohol is above 21 so a feature to implement in the future would be to link Bank ID for users to log in and confirm their age.
 
@@ -383,8 +388,9 @@ I set up the project into 3 sprints:
         - s3transfer==0.6.0
         - sqlparse==0.4.2
         - stripe==3.2.0
-
-- **[Bootstrap 4.6 boilerplate]**(https://getbootstrap.com/docs/4.6/getting-started/introduction/) 
+        
+- **[Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)**
+- **[Bootstrap 4.6 boilerplate](https://getbootstrap.com/docs/4.6/getting-started/introduction/)**
 - **HTML**
 - **CSS**
 - **JavaScript**
@@ -430,10 +436,47 @@ I run Lighthouse tool to check performance of the website.
 
 
 # Deployment
+### Github & Gitpod
+
+My app was built from the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template) and followed the deployment process from Code [Institute Django Blog Cheat Sheet]
+(https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
+
+### Deploy to Heroku
+1. Create a new account or login to your Heroku account
+2. Create a New Heroku app
+3. Name it and choose a region closest to you
+4. Click Resources and add 'Heroku Postgres' in Add-ons section
+5. To use the Postgres database it needs to be installed in Gitpod: Type `pip3 install dj_database_url` in the terminal and `pip3 install psycopg2-binary`
+6. Freeze these requirements with `pip3 freeze > requirements.txt`
+7. Set up new database in settings.py: import dj_database_url
+8. In Gitpod you also need to create a Procfile to tell Heroku to create a web dyno which will run gunicorn and serve our django app
+
+
+AWS amazon S3 bucket to load statics
+
 
 
 ## Local Deployment
 
+**Forking a GitHub Repository**
+
+To 'Fork' a repository, for instance if you want to make changes to the repository without affecting it, follow the steps below:
+
+- Login to your GitHub account and find the relevant repository
+- Click on 'Fork' on the top right of the page
+- You will find a copy of the repository in your own Github account
+
+**Cloning a GitHub Repository**
+
+Cloning your repository allows you to download a local version to be worked on. 
+Cloning can also be a great way to back up your work:
+
+- Find the relevant repository
+- Press the 'Code' button
+- Copy the link that is shown in the drop-down
+- Now open Gitpod & select the directory location where you would like the clone created
+- In the terminal type 'git clone' and paste the link you copied in GitHub
+- Press enter and your local clone will be created
 
 
 # Credits
