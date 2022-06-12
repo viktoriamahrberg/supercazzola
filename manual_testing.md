@@ -62,11 +62,75 @@
 |  **CHECKOUT PAGE** |  |  |
 | Shipping information | No/Wrong Input | Error messages when required field not filled in | Pass
 | Shipping information | Input | Error messages when required field not filled in | Pass
-| Shipping information | Input |  | Pass
+| Shipping information | Input | As first time visitor: Fields blank | Pass
+| Shipping information | Input | As logged in user: Prepopulated with information from My Account if it has been filled out earlier | Pass
 | Register/Login links | Click | Redirects to Register/Login page respectively | Pass
+| Card Payment | No/Wrong Input | Error messages when no card number is filled in | Pass
+| Card Payment | No/Wrong Input | Error messages when no card expire date is filled in | Pass
+| Card Payment | No/Wrong Input | Error messages when no postcode is filled in | Pass
+| Card Payment | Input | Proceeds with payment and overlay shows, form submits, then redirects to Order Confirmation page | Pass
+| Pay Total-button | Click and user closing down window | Webhook handler: Payment intent by Stripe - Order is being completed anyway and confirmation email is sent out | Pass
+| Pay Total-button | Click | Success: Order form is submitted, payment is being processed and success order completed | Pass
+| Pay Total-button | Click | Decline: Order is not being processed and error message show up on checkout page | Pass
+|  **CHECKOUT SUCCESS PAGE** |  |  |
+| Confirmation Email | Recieve email | Confirmation email is sent out ![Order Confirmation Email](/misc/readme_images/order_confirmation_email.png) | Pass
+| Take Me Home-button | Click | Back to Home page | Pass
+|  **MY PROFILE PAGE** |  |  |
+| Delivery Information | Input | No fields required | Pass
+| Update Information-button | Click | Update fields and being prepopulated at checkout | Pass
+|  **MY WISHLIST PAGE** |  |  |
+| Heart icon | Click | Removes product from My Wishlist Page | Pass
+|  **PRODUCT MANAGEMENT PAGE** |  |  |
+| Add a Product fields | Input | All fields are rendered empty | Pass
+| -Price field | Wrong Input | When entering a letter it throws an error | Pass
+| -Add Image | Upload image | Opens popup window with option to upload image from desktop. Displays the name of the product uploaded | Pass
+| -Image Url | Upload image | Prepopulates the url with image name | Fail
+| Add Product-button | Click | Without selected image: Adds product with default image, redirects to newly added product page | Pass
+| Add Product-button | Click | With selected image: Adds product with selected image, redirects to newly added product ![Newly added product](/misc/readme_images/add_product.png) | Pass
+|  **EDIT/DELETE PRODUCT (SUPERUSER ONLY)** |  |  |
+| Edit Product | Click | Redirects to edit product form with prepopulated product inputs | Pass
+| Edit Product | Image input | If product has image: Checkbox to remove image and option to add new with popup window | Pass
+| Edit Product | Image input | If product has default image: Option to add new with popup window| Pass
+| Update Product | Click | Product information is updated and redirects to newly edited product page | Pass
+| Delete Product | Click | Product is begin deleted and no longer in shop | Pass
+|  **ALLAUTH ACCOUNTS** |  |  |
+|  **REGISTER ACCOUNT** |  |  |
+| -Email field | Wrong Input | Throws an error if a valid email is not entered | Pass
+| -Email Confiramation field | Wrong Input | Throws an error if email is not matching above entered email | Pass
+| -Username field | Wrong Input | Throws an error if a user with same username already exists | Pass
+| -Password field | Wrong Input | Throws an error if password is too short. Minimum 8 characters | Pass
+| -Password Confirmation field | Wrong Input | Throws an error if password is not matching above entered password | Pass
+| -Signup-button | Click | If all above fields are entered correctly a 'Verify your email address' page shows ![Verify your email page](/misc/readme_images/signup_process1.png) | Pass
+| Confirmation email | Email link | User is being sent an email with a link to confirm their email and account signup [Confirm your email](/misc/readme_images/signup_process2.png)| Pass
+| Confirm-email-link in email | Click on email link | Opens a 'Confirm email' page | Pass
+| Confirm Email-button | Click | Email verified and confirm and redirects to 'Login' page | Pass
+|  **LOGIN PAGE** |  |  |
+| Email and Password inputs | Inputs | Throws error message if email/username or password is not matching registered users | Pass
+| Remember Me checkbox | Checkbox | Keeps the user logged in | Pass
+| Sign In-button | Click | Sign in the user sucessfully and redirects to logged in page with signed-in user navbar showing | Pass
+|  **LOGOUT PAGE** |  |  |
+| Log Out | Click | User is being asked: "Are you sure you want to sign out?" and if clicked on Log Out button user is being redirected to Homepage with "default" navbar | Pass
+|  **CONTACT US PAGE** |  |  |
+| Back Home-button | Click | Redirects user to Home page | Pass
+| Email input | Inputs | Throws an error if invalid email address and form won't submit | Pass
+| Contact form inputs | Inputs | Required inputs throws an error and form won't submit if left blank | Pass
 
 
-| Keep Shopping-button | Click | Back to Shopping page | Pass
+
+
+
+
+
+
+
+
+
+
+
+| Card Payment | Closing down window | Webhook handler: Payment intent by Stripe - Order is being proceeded | Pass
+
+
+
 | Go to Checkout-button | Click | Redirects to Checkout page | Pass
 
 
