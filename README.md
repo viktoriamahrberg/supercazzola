@@ -351,6 +351,8 @@ Link to [Github Project here](https://github.com/viktoriamahrberg/supercazzola/p
 Userstories were organised in "must-have", "could-have" or "should-have" labels in order to make prioritization of the scope easier. 
 I added userstories as I went on and realised what I want to add to the site in the future and have kept them in Backlog for further assessment after this project has been handed in.
 
+![Project Management Kanban board](/misc/readme_images/agile_project_management.png)
+
 I set up the project into 3 sprints:
 
 _Sprint 1 (23-25th May):_
