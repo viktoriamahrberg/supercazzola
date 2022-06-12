@@ -172,6 +172,7 @@ input.border-black:hover {
 .btn-outline-none:hover,
 .btn-outline-none:active,
 .btn-outline-none:focus,
+.dropdown-menu:hover,
 a:hover,
 a:active,
 a:focus {
@@ -183,7 +184,7 @@ a:focus {
 }
 
 a.dropdown-item:hover,
-a.dropdown-itema:active,
+a.dropdown-item:active,
 a.dropdown-item:focus {
     background-color: #DDC445;
     outline: 0;
