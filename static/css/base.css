@@ -67,20 +67,17 @@ body {
 }
 
 .home-cover-business-image {
-    background: url('/media/b2b_image.jpg') no-repeat center center;
+    background: url('/media/b2c_image.JPG') no-repeat center center;
     background-size: cover;
-    /* background-color: #6BAA73; */
-    /* background-color: #31656B; */
 }
 
 .home-cover-business-color {
     background-color: #31656B;
-    /* background-color: ; */
 
 }
 
 .home-cover-private-image {
-    background: url('/media/b2c_image.JPG') no-repeat center center;
+    background: url('/media/b2b_image.jpg') no-repeat center center;
     background-size: cover;
 
 }
@@ -265,12 +262,6 @@ a.dropdown-item:focus {
     height: 2px;
 }
 
-
-/* .row {
-    margin-right: 0px;
-    margin-left: 0px;
-} */
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -314,9 +305,9 @@ div.mc-field-group label {
 }
 div.mc-field-group input {
     border:#fff;
-    border-radius: 0;
-   
+    border-radius: 0; 
 }
+
 .btn-yellow {
     background: black;
     color: white;  
@@ -369,9 +360,17 @@ div.mc-field-group input {
 
     .home-cover {
         background: none;
+        max-height: 150px;
+        padding: 0;
     }
-    div.home-cover-private-image {
+    div.home-cover-business-image {
         display: none;
+    }
+    .home-cover-business-color {
+        max-height: 200px;
+    }
+    .home-cover-private-color {
+        max-height: 200px
     }
     .display-4.header-font.text-black {
         font-size: 1.5rem;
@@ -424,7 +423,7 @@ div.mc-field-group input {
         font-size: .7rem;
     }
     .d-flex.social-tags {
-        padding-top: 10px;
+        padding-top: 20px;
         justify-content: center;
     }
     .increment-qty, 

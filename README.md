@@ -1,3 +1,5 @@
+![Am I Responsive](/misc/readme_images/amiresponsive.png)
+
 # About
 
 **Supercazzola** which in italian means nonsense; "a phrase devoid of logical sense composed of a random set of real and non-existent words". Let's skip the pretentious talk about wine and just focus on really good wine!
@@ -297,6 +299,13 @@ After adding a product or editing a product the user is being redirected to that
 
 ![Admin Edit product](/misc/readme_images/admin_edit_product.png)
 
+**ADMIN: Admin Console**
+
+The Django framework provides a great Admin interface which has taken advantage of during development of this project. The admin panel allows superusers to add/edit products, remove/add users, check order information and see users wislist and wishlists items.
+
+![Admin panel](/misc/readme_images/adminpanel.png)
+![Admin panel](/misc/readme_images/adminpanel1.png)
+![Admin panel](/misc/readme_images/adminpanel2.png)
 
 ## Marketing:
 
@@ -426,18 +435,18 @@ _Sprint 3 (8 May - 13th June):_
     
     ![Pep8 Validator](/misc/readme_images/pep8.png)
 
-
-
-## Performance testing
+## Performance Testing
 
 I run Lighthouse tool to check performance of the website. 
 
 ![Lighthouse]
 
+## Responsiveness Testing
+
+
 ## Manual Testing
 
 [Link to manual User Story testing](/manual_testing.md)
-
 
 
 ## Bugs during development:
@@ -448,8 +457,19 @@ I run Lighthouse tool to check performance of the website.
 
 - Allauth templates (login-, signup-, logout.html etc) did not work to change and I tried to {% extend 'account/base.html' %} as well as {% extend 'base.html' %} but no changes I do renders in the preview. FIX - Django requires Allauths account folder had to be out of allauth - in templates folder.
 
+![Allauth bug](/misc/readme_images/bug_allauth.png)
+
+![Allauth bug fix](/misc/readme_images/bug_allauth_fix.png)
+
 - Stripe Webhook did not show any responses except for a 401 error in stripe events page. FIX - Turns out the Gitpod preview window needs to be made public for Stripe to be able to communicate.
 
+![Webhook fix](/misc/readme_images/stripe_webhook.png)
+
+- Images not showing when deployed to Heroku and synced with AWS S3 bucket. FIX - Tips from Stackoverflow - I had missed adding a line in settings: `django_template.context_processors_media`
+
+![No Image bug](/misc/readme_images/debug_no_image.png)
+
+![No Image Fix](/misc/readme_images/bug_allauth_fix.png)
 
 ## Bugs to be debugged after Project Deadline:
 
@@ -473,6 +493,8 @@ My app was built from the [Code Institute Gitpod Full Template](https://github.c
 10. Choose the branch you want to buid your app from
 11. Manual deployment from Gitpod to Heroku is made with command: `git push heroku main` in CLI.
 12. After finishing working on the site: DEBUG = False was changed in settings.py.
+
+![Successful Deployment](/misc/readme_images/deploymentsuccess.png)
 
 ### AWS S3
 
