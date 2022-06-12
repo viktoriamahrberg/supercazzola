@@ -54,7 +54,6 @@
 | Keep Shopping-button | Click | Back to Shopping page | Pass
 |  **CART PAGE** |  |  |
 | Delete button (X-button) | Click | Remove the product from shopping cart | Pass
-| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
 | Increment and Decrement buttons | Click | Increase or decrease corresponding quantity | Pass
 | Increment and Decrement buttons | Click | Add the corresponding quantity to Shopping Cart | Pass
 | Increment and Decrement buttons | Click | Blocks the quanity at 1 and 99 | Fail
@@ -73,21 +72,21 @@
 | Pay Total-button | Click | Success: Order form is submitted, payment is being processed and success order completed | Pass
 | Pay Total-button | Click | Decline: Order is not being processed and error message show up on checkout page | Pass
 |  **CHECKOUT SUCCESS PAGE** |  |  |
-| Confirmation Email | Recieve email | Confirmation email is sent out ![Order Confirmation Email](/misc/readme_images/order_confirmation_email.png) | Pass
+| Confirmation Email | Recieve email | ![Order Confirmation Email](/misc/readme_images/order_confirmation_email.png) Confirmation email is sent out  | Pass
 | Take Me Home-button | Click | Back to Home page | Pass
 |  **MY PROFILE PAGE** |  |  |
 | Delivery Information | Input | No fields required | Pass
 | Update Information-button | Click | Update fields and being prepopulated at checkout | Pass
 |  **MY WISHLIST PAGE** |  |  |
 | Heart icon | Click | Removes product from My Wishlist Page | Pass
-|  **PRODUCT MANAGEMENT PAGE** |  |  |
+|  **PRODUCT MANAGEMENT PAGE (Superuser only)** |  |  |
 | Add a Product fields | Input | All fields are rendered empty | Pass
 | -Price field | Wrong Input | When entering a letter it throws an error | Pass
 | -Add Image | Upload image | Opens popup window with option to upload image from desktop. Displays the name of the product uploaded | Pass
 | -Image Url | Upload image | Prepopulates the url with image name | Fail
-| Add Product-button | Click | Without selected image: Adds product with default image, redirects to newly added product page | Pass
-| Add Product-button | Click | With selected image: Adds product with selected image, redirects to newly added product ![Newly added product](/misc/readme_images/add_product.png) | Pass
-|  **EDIT/DELETE PRODUCT (SUPERUSER ONLY)** |  |  |
+| Add Product-button | Click | ![Newly added product](/misc/readme_images/add_product.png) Without selected image: Adds product with default image, redirects to newly added product page | Pass
+| Add Product-button | Click | With selected image: Adds product with selected image, redirects to newly added product  | Pass
+|  **EDIT/DELETE PRODUCT (Superuser only)** |  |  |
 | Edit Product | Click | Redirects to edit product form with prepopulated product inputs | Pass
 | Edit Product | Image input | If product has image: Checkbox to remove image and option to add new with popup window | Pass
 | Edit Product | Image input | If product has default image: Option to add new with popup window| Pass
@@ -100,8 +99,8 @@
 | -Username field | Wrong Input | Throws an error if a user with same username already exists | Pass
 | -Password field | Wrong Input | Throws an error if password is too short. Minimum 8 characters | Pass
 | -Password Confirmation field | Wrong Input | Throws an error if password is not matching above entered password | Pass
-| -Signup-button | Click | If all above fields are entered correctly a 'Verify your email address' page shows ![Verify your email page](/misc/readme_images/signup_process1.png) | Pass
-| Confirmation email | Email link | User is being sent an email with a link to confirm their email and account signup [Confirm your email](/misc/readme_images/signup_process2.png)| Pass
+| -Signup-button | Click | ![Verify your email page](/misc/readme_images/signup_process1.png) If all above fields are entered correctly a 'Verify your email address' page shows | Pass
+| Confirmation email | Email link | ![Confirm your email](/misc/readme_images/signup_process2.png) User is being sent an email with a link to confirm their email and account signup | Pass
 | Confirm-email-link in email | Click on email link | Opens a 'Confirm email' page | Pass
 | Confirm Email-button | Click | Email verified and confirm and redirects to 'Login' page | Pass
 |  **LOGIN PAGE** |  |  |
@@ -115,53 +114,6 @@
 | Email input | Inputs | Throws an error if invalid email address and form won't submit | Pass
 | Contact form inputs | Inputs | Required inputs throws an error and form won't submit if left blank | Pass
 
-
-
-
-
-
-
-
-
-
-
-
-
-| Card Payment | Closing down window | Webhook handler: Payment intent by Stripe - Order is being proceeded | Pass
-
-
-
-| Go to Checkout-button | Click | Redirects to Checkout page | Pass
-
-
-
-
-
-| MOBILE:Increment and Decrement buttons | Click | Add the corresponding quantity to Shopping Cart | Pass
-
-| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
-| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-| User loads the home page as signed in | Only Logout and Create Post links show in nav bar and all content loads and work as expected |  [x]
 
 # User Stories Testing
 
@@ -270,8 +222,6 @@
 - As a user I want to see Social Media links so that I easily can follow and be part of their community
     - In the footer users can sign up to Supercazzolas newsletter that has been embedded by Mailchimp and which will store all signed up emails. Also Social Media links can be found here, Facebook links to Supercazzolas Facebook Business page.
 
-    ![Footer Mailchimp and Social Media links](/misc/readme_images/footer.png)
-
 - As a user I want to see a navigation menu so that I can easily navigate on the site
     - The navbar consists of Shop - My Account and My Wishilist. On mobile version there is a burger menu with a dropdown to Home and Shop. 
 
@@ -288,3 +238,14 @@
     - A link to contact form can be found on the homepage which takes the user to a new page with a contact form.
 
     ![Contact form](/misc/readme_images/contactform.png)
+
+
+### Epic: Marketing
+- As an admin I want users to sign up for newsletters so that I can communicate with my audience 
+    - In the footer users can sign up to Supercazzolas newsletter that has been embedded by Mailchimp and which will store all signed up emails.
+
+    ![Footer Mailchimp and Social Media links](/misc/readme_images/footer.png)
+
+- As an Admin user I want to conduct research and implement SEO keywords so that I can to increase visibility and traction to my website.
+    - Meta description and kewords have been added to the head
+    

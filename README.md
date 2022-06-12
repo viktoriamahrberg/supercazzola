@@ -440,10 +440,15 @@ I run Lighthouse tool to check performance of the website.
 
 
 
-
 ## Bugs during development:
 
-- I accidentally made a commit with the `STRIPE_SECRET_KEY` in the `view.py` which ended up in version control, so I created a new secret key in Stripe and exported it and set a new variable 
+- I accidentally made a commit with the `STRIPE_SECRET_KEY` in the `view.py` which ended up in version control. FIX - I created a new secret key in Stripe and exported it and set a new variable 
+
+- I added one Update Bag button to update all products quantity in Cart-page and had issues to wrap my head around why it didn’t work to update the cart. FIX - I realised after trying many different options that the button is supposed to update *one* item - not the entire column. So I had to insert one on each row. 
+
+- Allauth templates (login-, signup-, logout.html etc) did not work to change and I tried to {% extend 'account/base.html' %} as well as {% extend 'base.html' %} but no changes I do renders in the preview. FIX - Django requires Allauths account folder had to be out of allauth - in templates folder.
+
+- Stripe Webhook did not show any responses except for a 401 error in stripe events page. FIX - Turns out the Gitpod preview window needs to be made public for Stripe to be able to communicate.
 
 
 ## Bugs to be debugged after Project Deadline:
