@@ -1,6 +1,5 @@
 
 /* General */
-
 html {
     height: 100%;
 }
@@ -63,8 +62,6 @@ body {
 .home-cover {
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover; 
-
-
 }
 
 .home-cover-business-image {
@@ -79,9 +76,9 @@ body {
 
 .home-cover-private-image {
     background: url('/media/b2b_image.jpg') no-repeat center center;
-    background-size: cover;
-
+    background-size: cover; 
 }
+
 .home-cover-private-color {
     background-color: #DDC445;
 }
@@ -106,7 +103,6 @@ body {
 
 
 /* Footer */
-
 footer a,
 footer p {
     color:#fff;
@@ -117,7 +113,6 @@ footer p {
 }
 
 /* Form */
-
 .border-black {
     border: 1px solid black !important;
 }
@@ -157,7 +152,6 @@ input.border-black:hover {
 .allauth-accounts-form input {
     border-color: #000;
     border-radius: 0;
-
 }
 
 .allauth-accounts-form input::placeholder {
@@ -237,15 +231,14 @@ a.dropdown-item:focus {
     box-shadow: none!important;
 }
 
-
 /* Toasts */
 .message-container {
     position: fixed;
     top: 75px;
     right: 15px;
     z-index: 99999999999;
-
 }
+
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -272,7 +265,6 @@ a.dropdown-item:focus {
     height: 1.5rem;
     width: 1.5rem;
 }
-
 
 /* Add/Edit Product Form */
 .btn-file {
@@ -323,6 +315,7 @@ div.mc-field-group input {
     color: white;
     border: none;
 }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -332,7 +325,7 @@ div.mc-field-group input {
   }
 }
 
-/* fixed top navbar only on medium and up */
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -346,7 +339,8 @@ div.mc-field-group input {
         padding-top: 135px;
     }
 }
-/* pad the top a bit when navbar is collapsed on mobile */
+
+/* Pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 80px;
@@ -354,7 +348,6 @@ div.mc-field-group input {
     .dropdown-item {
         padding: 0;
     }
-    
 
     .product-row.row {
         margin-left: 0;
@@ -369,18 +362,23 @@ div.mc-field-group input {
         max-height: 150px;
         padding: 0;
     }
+
     div.home-cover-business-image {
         display: none;
     }
+
     .home-cover-business-color {
         max-height: 200px;
     }
+
     .home-cover-private-color {
         max-height: 200px
     }
+
     .display-4.header-font.text-black {
         font-size: 1.5rem;
     }
+
     h2 {
         font-size: 1.3rem;
     } 
@@ -393,15 +391,19 @@ div.mc-field-group input {
     h5 {
         font-size: 1rem;
     }
+
     p {
         font-size: 1rem;
     }
+
     .nav-link.main-logo-link {
         padding-left: 0;
     }
+
     .text-muted {
         font-size: .7rem;
     }
+
     .sort-wine {
         font-size: .7rem;
         padding: 0;
@@ -412,6 +414,7 @@ div.mc-field-group input {
         padding: .350rem .350rem;
         font-size: .85rem;
     }
+
     h2.logo.logo-font {
     font-size: 1rem;
     }
@@ -419,10 +422,12 @@ div.mc-field-group input {
     .nav-link i.fa-lg {
         font-size: 1rem;
     }
+
     button.navbar-toggler {
         color: #000;
         border: none;
     }
+
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 0.9rem;
@@ -438,6 +443,5 @@ div.mc-field-group input {
     .increment-qty, 
     .decrement-qty {
         color: #000;
-    }
-    
+    } 
 }
