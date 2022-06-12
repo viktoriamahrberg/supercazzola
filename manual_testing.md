@@ -2,7 +2,7 @@
 
 [Back to README.md](/README.md)
 
-NAVBAR
+
 | Element | Action | Expected Output | Pass/Fail |
 | ----------- | ---- | ----------- | ---- |
 |  **NAVBAR** |  |  |
@@ -33,9 +33,60 @@ NAVBAR
 |  Shop Now-button | Click | Redirect to Product page | Pass
 |  Contact Us Here-button | Click | Redirect to Contact page | Pass
 |  **FOOTER** |  |  |
-|  -Social Media icons | Click | Redirects to Supercazzola Facebook Business page, Twitter homepage and Instagram homepage | Pass
+|  Social Media icons | Click | Redirects to Supercazzola Facebook Business page, Twitter homepage and Instagram homepage | Pass
 |  Signup Mailchimp | Input | Redirects to 'Mailchimp-Thank you for signing up page' | Pass
 |  Signup Mailchimp | Wrong Input | Redirects to 'Mailchimp-Error page and asks user to fill out correct details again' | Pass
+|  **SHOP PAGE (PRODUCTS PAGE)** |  |  |
+| Back to All Products-link  | Click | Redirects to All Products page | Pass
+| Sort Wine Selection By  | Click | Open Dropdown | Pass
+| Sort Wine Selection By: Price Low to High  | Click | Organise products by price, low to high | Pass
+| Sort Wine Selection By: Price High to Low  | Click | Organise products by price, High to Low | Pass
+| Sort Wine Selection By: By Color  | Click | Organise products by colors | Pass
+| Sort Wine Selection By: All Products  | Click | Show all products | Pass
+| Heart Symbol on products | Click | As logged in user: Adds product in wishlist | Pass
+| Product Image | Click | Redirects to the chosen Product Details page | Pass
+|  **PRODUCT DETAILS PAGE** |  |  |
+| Increment and Decrement buttons | Click | Add the corresponding quantity to Shopping Cart | Pass
+| Increment and Decrement buttons | Click | Blocks the number below 1 and above 99 | Pass
+| Increment and Decrement buttons | Enter a value above 99 | Error message pops up and won't allow to add | Pass
+| Keep Shopping-button | Click | Back to Shopping page | Pass
+| Add to Cart-button | Click | Adds product with corresponding quantity to cart | Pass
+| Keep Shopping-button | Click | Back to Shopping page | Pass
+|  **CART PAGE** |  |  |
+| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
+| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
+| Increment and Decrement buttons | Click | Increase or decrease corresponding quantity | Pass
+| Increment and Decrement buttons | Click | Add the corresponding quantity to Shopping Cart | Pass
+| Increment and Decrement buttons | Click | Blocks the quanity at 1 and 99 | Fail
+| MOBILE: Increment and Decrement buttons | Click | Blocks the quanity at 1 and 99 | Pass
+|  **CHECKOUT PAGE** |  |  |
+| Shipping information | No/Wrong Input | Error messages when required field not filled in | Pass
+| Shipping information | Input | Error messages when required field not filled in | Pass
+| Shipping information | Input |  | Pass
+| Register/Login links | Click | Redirects to Register/Login page respectively | Pass
+
+
+| Keep Shopping-button | Click | Back to Shopping page | Pass
+| Go to Checkout-button | Click | Redirects to Checkout page | Pass
+
+
+
+
+
+| MOBILE:Increment and Decrement buttons | Click | Add the corresponding quantity to Shopping Cart | Pass
+
+| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
+| Delete button (X-button) | Click | Remove the product from shopping cart | Pass
+
+
+
+
+
+
+
+
+
+
 
 
 
