@@ -398,11 +398,13 @@ div.mc-field-group input {
         padding-left: 0;
     }
     .text-muted {
-        font-size: .9rem;
+        font-size: .7rem;
     }
-    .sort-selection > a {
-        padding-left: 0;
+    .sort-wine {
+        font-size: .7rem;
+        padding: 0;
     }
+
     .btn-lg,
     .btn-lg {
         padding: .350rem .350rem;
@@ -435,5 +437,5 @@ div.mc-field-group input {
     .decrement-qty {
         color: #000;
     }
-
+    
 }

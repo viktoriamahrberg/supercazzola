@@ -200,6 +200,7 @@
 
 - As a user I want to be notified when an order has gone through so that I know it was successful 
     - Users are being redirected to a confirmation page upon succesfull checkout and a pop-up message confirms the payment was successful. The confirmation page shows an order summary including shipping information, total price, order summary, order number and order date.
+    Email confirmation is being sent to client with order summary.
 
     ![Checkout Confirmation](/misc/readme_images/checkout_confirmation.png)
 

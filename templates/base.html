@@ -90,7 +90,7 @@
                             <a href="{% url 'products' %}?category=rose" class="dropdown-item">Rosé</a>
                         </div>
                     </li>
-                    <!-- Heart -->
+                    <!-- Heart / Wishlist -->
                     {% if request.user.is_authenticated %}
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="" id="user-options" data-toggle="dropdown"
@@ -106,7 +106,7 @@
                         </div>
                     </li>
                     {% endif %}
-                    <!-- profile -->
+                    <!-- Profile -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -214,7 +214,6 @@
                                 class="validate" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll">
                                     <h5 class="header-font text-white text-center pt-4 p-2">Join our squad</h5>
-
                                     <div class="mc-field-group">
                                         <input type="email" value="Your email *" name="EMAIL"
                                             class="required email mb-3 w-100" id="mce-EMAIL">
@@ -242,8 +241,12 @@
             </div>
             <!-- Copyright -->
             <div class="footer-copyright py-2">
-                <p class="small">© 2022 Copyright:
-                    <a href="/">Supercazzola</a></p>
+                <span>
+                <a href="https://www.privacypolicygenerator.info/live.php?token=aw5z9JSodZFPZxLY17A1aLjC29tJYzBC" 
+                target=”_blank” rel=“noopener”><p class="small">GDPR Privacy Policy</p>  
+                </a></span>
+                <span><p class="small">© 2022 Copyright:
+                    <a href="/">Supercazzola</a></p></span>
             </div>
         </div>
         </div>
