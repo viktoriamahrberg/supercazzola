@@ -443,6 +443,26 @@ I run Lighthouse tool to check performance of the website.
 
 ## Responsiveness Testing
 
+I have tested responsivness from Iphone5/SE, Ipad Mini up to my Macbook'11. 
+
+**HOME:**
+
+**SHOP:**
+
+**PRODUCT PAGE:**
+
+**LOGIN/REGISTER/LOGOUT:**
+
+**FOOTER:**
+I had a bug with the footer coming up on homescreen at first:
+
+![Footer Bug](/misc/readme_images/responsive_home_footer.png)
+
+FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) 
+
+![Fixed footer](/misc/readme_images/responsive_fixed_footer.png)
+
+
 
 ## Manual Testing
 

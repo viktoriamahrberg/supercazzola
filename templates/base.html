@@ -52,7 +52,7 @@
     <title>Supercazzola Wine {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -101,7 +101,7 @@
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            <a href="{% url 'wishlist' %}" class="dropdown-item">My wishlist</a>
+                            <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
 
                         </div>
                     </li>
@@ -182,14 +182,14 @@
     {% endblock %}
 
     <!-- Footer from Bootstrap -->
-<footer>
-    <div class="page-footer font-small mt-auto">
+<footer class="mt-auto">
+    <div class="page-footer font-small">
         <!-- Footer Elements -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 my-auto">
                     <div class="d-flex social-tags">
-                        <h5 class="header-font text-white d-none d-sm-block mr-md-5 mb-3">Follow us :</h5>
+                        <h5 class="header-font text-white d-none d-sm-none mr-md-5 mb-3">Follow us :</h5>
                         <!-- Facebook Supercazzola Business Page -->
                         <a href="https://www.facebook.com/supercazzolawine/" target=”_blank” rel=“noopener” class="fb-ic">
                             <i class="fab fa-facebook-f white-text fa-lg mr-md-5 mr-3 fa-2x"> </i>

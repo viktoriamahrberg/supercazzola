@@ -145,7 +145,7 @@
                                     </tr>
                             </div>
                             {% else %}
-                            <p class="mb-5">Your cart is empty.</p>
+                            <p class="m-5 header-font text-center text-info">Your cart is empty</p>
                             <div class="col-12 text-center">
                                 <span class="header-font"><a href="{% url 'products' %}">Keep browsing</a></span>
                             </div>
@@ -154,11 +154,10 @@
                     </table>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-</div>
+
 {% endblock %}
 
 {% block postloadjs %}
