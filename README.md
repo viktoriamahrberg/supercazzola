@@ -307,6 +307,12 @@ The Django framework provides a great Admin interface which has taken advantage 
 ![Admin panel](/misc/readme_images/adminpanel1.png)
 ![Admin panel](/misc/readme_images/adminpanel2.png)
 
+## Features to still be implemented:
+
+- Overlay with an alert message asking if customer is above legal age of 21 to buy alcohol
+
+- Heart to change color on Products page when adding to Wishlist
+
 ## Marketing:
 
 **Mailchimp**
@@ -487,6 +493,8 @@ FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](htt
 ## Bugs to be debugged after Project Deadline:
 
 - Increment and decrement button on full screen in Cart page is not blocking user from going below 0. I tried several options with changing ID to classes and make two different Javascript codes for the mobile version and full screen version. Unfortunately the time was not enough for this matter and will be sorted after project deadline.
+
+- Mailchimp input label doesn't remove automatically when entering an email
 
 - 
 
