@@ -63,8 +63,8 @@
                             <div class="col-3 small">
                                 <ul class="list-unstyled">
                                     {% for item in order.lineitems.all %}
-                                    <li>
-                                       <p class="small">{{ item.quantity }} x {{ item.product.name }}: €{{ item.product.price }} </p>
+                                    <li class="small">
+                                       <p>{{ item.quantity }} x {{ item.product.name }}: €{{ item.product.price }} </p>
                                     </li>
                                     {% endfor %}   
                                 </ul>

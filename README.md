@@ -443,24 +443,8 @@ I run Lighthouse tool to check performance of the website.
 
 ## Responsiveness Testing
 
-I have tested responsivness from Iphone5/SE, Ipad Mini up to my Macbook'11. 
+I have tested the deployed version on different devices such Iphone5/SE, Ipad Mini and my Macbook'11. Any responsive issues have been fixed. 
 
-**HOME:**
-
-**SHOP:**
-
-**PRODUCT PAGE:**
-
-**LOGIN/REGISTER/LOGOUT:**
-
-**FOOTER:**
-I had a bug with the footer coming up on homescreen at first:
-
-![Footer Bug](/misc/readme_images/responsive_home_footer.png)
-
-FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) 
-
-![Fixed footer](/misc/readme_images/responsive_fixed_footer.png)
 
 
 
@@ -491,8 +475,20 @@ FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](htt
 
 ![No Image Fix](/misc/readme_images/bug_allauth_fix.png)
 
+- I had a bug with the footer coming up on homescreen at first:
+
+![Footer Bug](/misc/readme_images/responsive_home_footer.png)
+
+FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) 
+
+![Fixed footer](/misc/readme_images/responsive_fixed_footer.png)
+
+
 ## Bugs to be debugged after Project Deadline:
 
+- Increment and decrement button on full screen in Cart page is not blocking user from going below 0. I tried several options with changing ID to classes and make two different Javascript codes for the mobile version and full screen version. Unfortunately the time was not enough for this matter and will be sorted after project deadline.
+
+- 
 
 # Deployment
 ### Github & Gitpod
