@@ -7,6 +7,8 @@ For us it is just about good, non pretentious, low intervention wines from our f
 They may be the sons and daughters from the more classic wineries or new vinyard experimenting and just doing their own thing. Either way, they are making their own paths and pushing wine making into the future, experimenting on their own and providing us with outstanding wines. As long as we find it great, we are proud to be your local wine distributor in Southern Sweden. 
 Because we assure you - you will come back for more. 
 
+Live link [here](https://supercazzola.herokuapp.com/)
+
 # UX 
 
 # Strategy
@@ -120,6 +122,8 @@ Following models have been created for this project:
 - Wishlist App:
     - Wishlist - Stores all users liked item
     - WishlistItem - Allowing users to add individual items to their wishlist
+- Contact App
+    - Contact - Database for email requests sent by companies (B2B)
 
 ## Database Schema:
 
@@ -424,14 +428,20 @@ _Sprint 3 (8 May - 13th June):_
 - **Balsamiq** (Wireframes)
 - **DBdiagram** (Database schema)
 - **TinyPNG** (Compress image file)
+- **[Privacy Policy Generator](https://www.privacypolicygenerator.info/)**
 
 
 # Testing
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS
 
+![CSS Validation](/misc/readme_images/css_validation.png)
+
 [Html Checker](https://validator.w3.org/nu) to test HTML
 
-[JSHint](https://jshint.com/) to test Javascript
+
+[JSHint](https://jshint.com/) to test Javascript - No Errors found
+
+![JSHint](/misc/readme_images/jshint.png)
 
 [PEP8 Validator](http://pep8online.com/) to test all Python files.
 All files in the following apps have have been tested manually in Pep8 and shown code is all right:
@@ -450,6 +460,8 @@ All files in the following apps have have been tested manually in Pep8 and shown
 - Supercazzola
 
 - Wishlist
+
+- Contact
     
 ![Pep8 Validator](/misc/readme_images/pep8.png)
 
@@ -495,14 +507,26 @@ FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](htt
 
 ![Fixed footer](/misc/readme_images/responsive_fixed_footer.png)
 
+- Burger menu on ipad was showing Shop dropdown in a funny manner. 
+
+![Burger menu bug](/misc/readme_images/debug_burger_menu.png)
+
+    - FIX: the <li> element was child of <nav> and messed things up. Sorted by inserting a <Ul> element. 
+    Still not showing HOME dropdown. Can be read about in Bugs to be debugged below.
+
+![Burger menu Fix](/misc/readme_images/debug_burger_menu_ul.png)
 
 ## Bugs to be debugged after Project Deadline:
+
+- Burger menu on Ipad (medium size screens) doesn't display HOME dropdown.
+Tried to debug this before submitting project but ran unfortunately out of time so unfortunately had to leave as is. 
+
+![Burger menu bug](/misc/readme_images/burger_bug_shop_dropdown.png)
 
 - Increment and decrement button on full screen in Cart page is not blocking user from going below 0. I tried several options with changing ID to classes and make two different Javascript codes for the mobile version and full screen version. Unfortunately the time was not enough for this matter and will be sorted after project deadline.
 
 - Mailchimp input label doesn't remove automatically when entering an email
 
-- Burger menu is not opening dropdown on Ipad Mini
 
 # Deployment
 ### Github & Gitpod
@@ -563,13 +587,15 @@ Thank you Code Institute - it's been a real hero for my understanding of Django.
 
 - Thank you all fantastic tutors at Code Institute
 
+- Peers and community threads in Slack - Huge help!
+
 - [Colormind.io](http://colormind.io/) - Color palette picker 
 
 - [How to make footer stay at bottom with Bootstrap](https://radu.link/make-footer-stay-bottom-page-bootstrap/) 
 
 - [When migrating an already existing model](https://pytutorial.com/how-to-solve-you-are-trying-to-add-a-non-nullable-field-to-without-a-default)
 
-- [Build a contact form](https://learndjango.com/tutorials/django-email-contact-form)
+- [Build a contact form](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid)
 
 - Photos: My partner William Thornton
 

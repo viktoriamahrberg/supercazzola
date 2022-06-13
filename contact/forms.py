@@ -3,6 +3,9 @@ from django.forms import ModelForm
 
 
 class ContactForm(ModelForm):
+    """
+    Contact Form
+    """
     class Meta:
         model = Contact
         fields = ('email', 'subject', 'message')
@@ -28,3 +31,4 @@ class ContactForm(ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
+

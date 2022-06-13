@@ -1,7 +1,7 @@
-from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
+
 
 def contact(request):
     """
@@ -15,7 +15,6 @@ def contact(request):
     form = ContactForm()
     context = {'form': form}
     return render(request, 'contact.html', context)
-
 
 
 def contact_success(request):
