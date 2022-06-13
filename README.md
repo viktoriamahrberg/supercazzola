@@ -184,9 +184,11 @@ Heyreliable font pairing:
 ![Heyreliable fonts](/misc/readme_images/Heyreliable_fonts.png)
 
 Fonts: *Permanent Marker* paired with *Overpass Regular*
+
 ![Fonts Permanent Marker and Overpass Regular](/misc/readme_images/fonts.png)
 
 Logo Font: *Londrina Solid*
+
 ![Logo](/misc/readme_images/logo.png)
 
 
@@ -307,11 +309,6 @@ The Django framework provides a great Admin interface which has taken advantage 
 ![Admin panel](/misc/readme_images/adminpanel1.png)
 ![Admin panel](/misc/readme_images/adminpanel2.png)
 
-## Features to still be implemented:
-
-- Overlay with an alert message asking if customer is above legal age of 21 to buy alcohol
-
-- Heart to change color on Products page when adding to Wishlist
 
 ## Marketing:
 
@@ -374,9 +371,15 @@ _Sprint 3 (8 May - 13th June):_
 
 ### Backlog: Features to be implemented in future:
 
+- Overlay with an alert message asking if customer is above legal age of 21 to buy alcohol
+
+- Heart to change color on Products page when adding to Wishlist
+
 - The legal age to buy alcohol is above 21 so a feature to implement in the future would be to link Bank ID for users to log in and confirm their age.
 
 - Klarna for seamless checkout, as well as remove test mode for Stripe
+
+- In Admin panel: Rank the wishlist items according to most 'likes' in order to see popular wines for company to increase sales
 
 
 # Technology used
@@ -431,28 +434,29 @@ _Sprint 3 (8 May - 13th June):_
 [JSHint](https://jshint.com/) to test Javascript
 
 [PEP8 Validator](http://pep8online.com/) to test all Python files.
-    All files in the following apps have have been tested manually in Pep8 and shown code is all right:
-     - Bag
-     - Checkout
-     - Contact 
-     - Home
-     - Products
-     - Profiles
-     - Supercazzola
-     - Wishlist
+All files in the following apps have have been tested manually in Pep8 and shown code is all right:
+- Bag
+
+- Checkout
+
+- Contact 
+
+- Home
+
+- Products
+
+- Profiles
+
+- Supercazzola
+
+- Wishlist
     
-    ![Pep8 Validator](/misc/readme_images/pep8.png)
+![Pep8 Validator](/misc/readme_images/pep8.png)
 
-## Performance Testing
-
-I run Lighthouse tool to check performance of the website. 
-
-![Lighthouse]
 
 ## Responsiveness Testing
 
 I have tested the deployed version on different devices such Iphone5/SE, Ipad Mini and my Macbook'11. Any responsive issues have been fixed. 
-
 
 
 
@@ -498,7 +502,7 @@ FIX: Followed this link - [How to make footer stay at bottom with Bootstrap](htt
 
 - Mailchimp input label doesn't remove automatically when entering an email
 
-- 
+- Burger menu is not opening dropdown on Ipad Mini
 
 # Deployment
 ### Github & Gitpod
@@ -557,6 +561,7 @@ Cloning can also be a great way to back up your work:
 - **Code:** The core functionality of Supercazzola is coming from the [Code Institute's](https://codeinstitute.net/) walkthrough project - [Boutique Ado Project](https://boutique-ado-vikmah.herokuapp.com/).
 Thank you Code Institute - it's been a real hero for my understanding of Django.
 
+- Thank you all fantastic tutors at Code Institute
 
 - [Colormind.io](http://colormind.io/) - Color palette picker 
 
@@ -569,6 +574,8 @@ Thank you Code Institute - it's been a real hero for my understanding of Django.
 - Photos: My partner William Thornton
 
 - Product images and description: https://www.cybercellar.com/product-category/wine/
+
+
 
 
 

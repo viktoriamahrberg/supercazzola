@@ -3,29 +3,19 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 
-
 def contact(request):
     """
     View for contact form
     """
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
+    if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(
-                    subject, message, from_email, ['supercazzola@example.com']
-                    )
-            except BadHeaderError:
-                messages.error(request, (
-                        "Invalid header found.")
-                    )
-            return redirect('contact_success')
-    return render(request, "contact.html", {'form': form})
+            form.save()
+            return render(request, 'contact_success.html')
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact.html', context)
+
 
 
 def contact_success(request):
