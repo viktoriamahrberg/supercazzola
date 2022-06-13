@@ -436,7 +436,9 @@ _Sprint 3 (8 May - 13th June):_
 
 ![CSS Validation](/misc/readme_images/css_validation.png)
 
-[Html Checker](https://validator.w3.org/nu) to test HTML
+[Html Checker](https://validator.w3.org/nu) to test HTML - Error shown but ran out of time to figure out how to solve this with the `{% include/mobile-header %}` tags.
+
+![HTML error](/misc/readme_images/html_testing.png)
 
 
 [JSHint](https://jshint.com/) to test Javascript - No Errors found
