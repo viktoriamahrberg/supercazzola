@@ -113,6 +113,12 @@ footer p {
 }
 
 /* Form */
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+
 .border-black {
     border: 1px solid black !important;
 }
@@ -297,10 +303,19 @@ a.dropdown-item:focus {
 div.mc-field-group label {
     visibility: hidden;
 }
-div.mc-field-group input {
-    border:#fff;
-    border-radius: 0; 
+
+#mce-EMAIL {
+    background-color: #fff;
+    border: #fff;
+    
 }
+#mce-EMAIL:focus {
+    background-color: #fff;
+    border: #fff;
+}
+
+
+
 
 .btn-yellow {
     background: black;
