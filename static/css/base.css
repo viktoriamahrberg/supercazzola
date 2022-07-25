@@ -41,6 +41,7 @@ body {
 
 .header-font {
     font-family: 'Permanent Marker';
+    color: #000;
 }
 
 .text-muted {
@@ -57,6 +58,12 @@ body {
 .text-black {
     color: #000 !important;
 }
+
+.text-black:hover,
+.text-black:focus {
+    color: #DDC445 !important;
+}
+
 
 /* Images home page */
 .home-cover {
@@ -214,6 +221,7 @@ a.dropdown-item:focus {
 .btn-black:focus {
     background: #292F30;
     color: white;
+    box-shadow: none!important;
 }
 
 .btt-button {
@@ -232,6 +240,7 @@ a.dropdown-item:focus {
 .btt-link:active,
 .btt-link:focus {
     background-color: #DDC445;
+    color:#000;
     text-decoration: none;
     outline: 0;
     box-shadow: none!important;
