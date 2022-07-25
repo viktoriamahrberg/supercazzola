@@ -59,8 +59,10 @@ body {
     color: #000 !important;
 }
 
-.text-black:hover,
-.text-black:focus {
+a > .text-black:hover,
+a > .text-black:focus
+span > .text-black:hover,
+span > .text-black:focus {
     color: #DDC445 !important;
 }
 
@@ -235,7 +237,9 @@ a.dropdown-item:focus {
 .btt-link {
     cursor: pointer;
 }
-
+.btn-search:hover,
+.btn-search:active,
+.btn-search:focus,
 .btt-link:hover,
 .btt-link:active,
 .btt-link:focus {
@@ -322,8 +326,6 @@ div.mc-field-group label {
     border-color: #000;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
-
-
 
 
 .btn-yellow {
