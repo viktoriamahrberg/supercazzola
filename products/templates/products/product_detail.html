@@ -23,6 +23,17 @@
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
+                <!-- Wishlist -->
+                <!-- <div class="text-right">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'add_to_wishlist' product.id %}" aria-label="Add product to Wishlist"><i
+                            class="fa-regular fa-heart unlike" id="heart-wishlist"></i></a>
+                    {% if product in wishlist %}
+                    <a href="{% url 'remove_from_wishlist' product.id %}"
+                        aria-label="Remove product from Wishlist"><i class="fa-solid fa-heart like"></i></a>
+                    {% endif %}
+                    {% endif %}
+                </div> -->
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">

@@ -41,12 +41,12 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sort wine selection by
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="sort-products-link">
-                            <a href="{% url 'products' %}?sort=price&direction=asc" value="price_asc"
+                        <div class="dropdown-menu border-0" aria-label="sort-products-link">
+                            <a href="{% url 'products' %}?sort=price&direction=asc"
                                 class="dropdown-item">By price: low to high</a>
-                            <a href="{% url 'products' %}?sort=price&direction=desc" value="price_desc"
+                            <a href="{% url 'products' %}?sort=price&direction=desc"
                                 class="dropdown-item">By price: high to low</a>
-                            <a href="{% url 'products' %}?sort=category&direction=asc" value="category_asc"
+                            <a href="{% url 'products' %}?sort=category&direction=asc"
                                 class="dropdown-item ">By colour</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
@@ -118,7 +118,6 @@
             {% endfor %}
         </div>
     </div>
-</div>
 </div>
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100">
